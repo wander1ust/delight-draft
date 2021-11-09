@@ -1,0 +1,611 @@
+{
+    "objects":
+    [
+        {
+            "type": "ITEM",
+            "id": "23DNAIJLAXPVWATIXGIS3KBJ",
+            "updatedAt": "2021-10-08T11:07:15.538Z",
+            "version": "1633691235538",
+            "isDeleted": false,
+            "customAttributeValues":
+            {
+                "Square:df79120d-8ac5-492b-9817-c2a3867d99f3":
+                {
+                    "name": "Dietary",
+                    "stringValue": "Vegan",
+                    "customAttributeDefinitionId": "4YNW6GBA6OX7KTARIAANXJJU",
+                    "type": "STRING",
+                    "key": "Square:df79120d-8ac5-492b-9817-c2a3867d99f3"
+                }
+            },
+            "presentAtAllLocations": true,
+            "imageId": "Y2JLDEEDX5G5DCUVJLDNHXNM",
+            "itemData":
+            {
+                "name": "Mac 'n Cheese",
+                "description": "Triple layered melted cheese blended in creamy cheddar sauce with elbow macaroni. Classic comfort food.",
+                "labelColor": "13b1bf",
+                "modifierListInfo":
+                [
+                    {
+                        "modifierListId": "3PSYGESADPJ2BAYM2VSLISGY",
+                        "minSelectedModifiers": -1,
+                        "maxSelectedModifiers": -1,
+                        "enabled": true
+                    }
+                ],
+                "variations":
+                [
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "U26MVDX7U7RU6L6U3CKC22A3",
+                        "updatedAt": "2021-10-08T11:07:15.538Z",
+                        "version": "1633691235538",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "23DNAIJLAXPVWATIXGIS3KBJ",
+                            "name": "Regular",
+                            "ordinal": 1,
+                            "pricingType": "FIXED_PRICING",
+                            "priceMoney":
+                            {
+                                "amount": "1200",
+                                "currency": "USD"
+                            },
+                            "locationOverrides":
+                            [
+                                {
+                                    "locationId": "L7HZWG4R2G92Z",
+                                    "trackInventory": true
+                                }
+                            ],
+                            "stockable": true
+                        }
+                    }
+                ],
+                "productType": "REGULAR",
+                "skipModifierScreen": false
+            }
+        },
+        {
+            "type": "ITEM",
+            "id": "6HIQHVMPDDKYOGSPMGSTSXBC",
+            "updatedAt": "2021-10-08T11:17:01.744Z",
+            "version": "1633691821744",
+            "isDeleted": false,
+            "presentAtAllLocations": true,
+            "imageId": "YP2S32M6TPMBLQVTC62P5G3U",
+            "itemData":
+            {
+                "name": "Coffee",
+                "categoryId": "MCGQ5PK2J6YCI642XMHLUAJY",
+                "variations":
+                [
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "GOASJUPLYQL3F6EN3OZ46QZA",
+                        "updatedAt": "2021-10-08T11:17:01.744Z",
+                        "version": "1633691821744",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "6HIQHVMPDDKYOGSPMGSTSXBC",
+                            "name": "French Vanilla, Small",
+                            "ordinal": 0,
+                            "pricingType": "VARIABLE_PRICING",
+                            "locationOverrides":
+                            [
+                                {
+                                    "locationId": "L7HZWG4R2G92Z",
+                                    "trackInventory": true
+                                }
+                            ],
+                            "itemOptionValues":
+                            [
+                                {
+                                    "itemOptionId": "HRXTFIAISZUAZGRTXMNROLKC",
+                                    "itemOptionValueId": "QGQP4LDV33HGZHWXMIUDQSDX"
+                                },
+                                {
+                                    "itemOptionId": "EXH5XNICOKWWFCFXBZQ7BM2B",
+                                    "itemOptionValueId": "Z4MDHLOU3TVDMWUH3MYVEZVT"
+                                }
+                            ],
+                            "stockable": true
+                        }
+                    },
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "UQKG2PBGYCL4NK6MI5VZSTO5",
+                        "updatedAt": "2021-10-08T11:17:01.744Z",
+                        "version": "1633691821744",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "6HIQHVMPDDKYOGSPMGSTSXBC",
+                            "name": "French Vanilla, Medium",
+                            "ordinal": 1,
+                            "pricingType": "VARIABLE_PRICING",
+                            "locationOverrides":
+                            [
+                                {
+                                    "locationId": "L7HZWG4R2G92Z",
+                                    "trackInventory": true
+                                }
+                            ],
+                            "itemOptionValues":
+                            [
+                                {
+                                    "itemOptionId": "HRXTFIAISZUAZGRTXMNROLKC",
+                                    "itemOptionValueId": "QGQP4LDV33HGZHWXMIUDQSDX"
+                                },
+                                {
+                                    "itemOptionId": "EXH5XNICOKWWFCFXBZQ7BM2B",
+                                    "itemOptionValueId": "UE6W6YL54HAW7Z3K7EDCDKQP"
+                                }
+                            ],
+                            "stockable": true
+                        }
+                    },
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "RXSF57HCIQWMPOK6322FBPWA",
+                        "updatedAt": "2021-10-08T11:17:01.744Z",
+                        "version": "1633691821744",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "6HIQHVMPDDKYOGSPMGSTSXBC",
+                            "name": "French Vanilla, Large",
+                            "ordinal": 2,
+                            "pricingType": "VARIABLE_PRICING",
+                            "locationOverrides":
+                            [
+                                {
+                                    "locationId": "L7HZWG4R2G92Z",
+                                    "trackInventory": true
+                                }
+                            ],
+                            "itemOptionValues":
+                            [
+                                {
+                                    "itemOptionId": "HRXTFIAISZUAZGRTXMNROLKC",
+                                    "itemOptionValueId": "QGQP4LDV33HGZHWXMIUDQSDX"
+                                },
+                                {
+                                    "itemOptionId": "EXH5XNICOKWWFCFXBZQ7BM2B",
+                                    "itemOptionValueId": "WFNJ2SB4LU636RLR42VOI5ZX"
+                                }
+                            ],
+                            "stockable": true
+                        }
+                    },
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "4I6RDEMQUKJ7XFQJTKC7UPHV",
+                        "updatedAt": "2021-10-08T11:17:01.744Z",
+                        "version": "1633691821744",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "6HIQHVMPDDKYOGSPMGSTSXBC",
+                            "name": "Mocha, Small",
+                            "ordinal": 3,
+                            "pricingType": "VARIABLE_PRICING",
+                            "locationOverrides":
+                            [
+                                {
+                                    "locationId": "L7HZWG4R2G92Z",
+                                    "trackInventory": true
+                                }
+                            ],
+                            "itemOptionValues":
+                            [
+                                {
+                                    "itemOptionId": "HRXTFIAISZUAZGRTXMNROLKC",
+                                    "itemOptionValueId": "HNCZ6POQJV7CMTH22UFLTOC6"
+                                },
+                                {
+                                    "itemOptionId": "EXH5XNICOKWWFCFXBZQ7BM2B",
+                                    "itemOptionValueId": "Z4MDHLOU3TVDMWUH3MYVEZVT"
+                                }
+                            ],
+                            "stockable": true
+                        }
+                    },
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "LWVI6U6LIU7TV6FBRESN3H4X",
+                        "updatedAt": "2021-10-08T11:17:01.744Z",
+                        "version": "1633691821744",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "6HIQHVMPDDKYOGSPMGSTSXBC",
+                            "name": "Mocha, Medium",
+                            "ordinal": 4,
+                            "pricingType": "VARIABLE_PRICING",
+                            "locationOverrides":
+                            [
+                                {
+                                    "locationId": "L7HZWG4R2G92Z",
+                                    "trackInventory": true
+                                }
+                            ],
+                            "itemOptionValues":
+                            [
+                                {
+                                    "itemOptionId": "HRXTFIAISZUAZGRTXMNROLKC",
+                                    "itemOptionValueId": "HNCZ6POQJV7CMTH22UFLTOC6"
+                                },
+                                {
+                                    "itemOptionId": "EXH5XNICOKWWFCFXBZQ7BM2B",
+                                    "itemOptionValueId": "UE6W6YL54HAW7Z3K7EDCDKQP"
+                                }
+                            ],
+                            "stockable": true
+                        }
+                    },
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "CGRC3DKJ36B3NTQCF6YQHLFU",
+                        "updatedAt": "2021-10-08T11:17:01.744Z",
+                        "version": "1633691821744",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "6HIQHVMPDDKYOGSPMGSTSXBC",
+                            "name": "Mocha, Large",
+                            "ordinal": 5,
+                            "pricingType": "VARIABLE_PRICING",
+                            "locationOverrides":
+                            [
+                                {
+                                    "locationId": "L7HZWG4R2G92Z",
+                                    "trackInventory": true
+                                }
+                            ],
+                            "itemOptionValues":
+                            [
+                                {
+                                    "itemOptionId": "HRXTFIAISZUAZGRTXMNROLKC",
+                                    "itemOptionValueId": "HNCZ6POQJV7CMTH22UFLTOC6"
+                                },
+                                {
+                                    "itemOptionId": "EXH5XNICOKWWFCFXBZQ7BM2B",
+                                    "itemOptionValueId": "WFNJ2SB4LU636RLR42VOI5ZX"
+                                }
+                            ],
+                            "stockable": true
+                        }
+                    },
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "RLZASH3CT4TKEADW2Q6MKPD6",
+                        "updatedAt": "2021-10-08T11:17:01.744Z",
+                        "version": "1633691821744",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "6HIQHVMPDDKYOGSPMGSTSXBC",
+                            "name": "Dark Roast, Small",
+                            "ordinal": 6,
+                            "pricingType": "VARIABLE_PRICING",
+                            "locationOverrides":
+                            [
+                                {
+                                    "locationId": "L7HZWG4R2G92Z",
+                                    "trackInventory": true
+                                }
+                            ],
+                            "itemOptionValues":
+                            [
+                                {
+                                    "itemOptionId": "HRXTFIAISZUAZGRTXMNROLKC",
+                                    "itemOptionValueId": "KR2FTYSWRAZT4UGLG6YJZKXF"
+                                },
+                                {
+                                    "itemOptionId": "EXH5XNICOKWWFCFXBZQ7BM2B",
+                                    "itemOptionValueId": "Z4MDHLOU3TVDMWUH3MYVEZVT"
+                                }
+                            ],
+                            "stockable": true
+                        }
+                    },
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "D6MBFPNAOFZMXBCRUTQVKX2R",
+                        "updatedAt": "2021-10-08T11:17:01.744Z",
+                        "version": "1633691821744",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "6HIQHVMPDDKYOGSPMGSTSXBC",
+                            "name": "Dark Roast, Medium",
+                            "ordinal": 7,
+                            "pricingType": "VARIABLE_PRICING",
+                            "locationOverrides":
+                            [
+                                {
+                                    "locationId": "L7HZWG4R2G92Z",
+                                    "trackInventory": true
+                                }
+                            ],
+                            "itemOptionValues":
+                            [
+                                {
+                                    "itemOptionId": "HRXTFIAISZUAZGRTXMNROLKC",
+                                    "itemOptionValueId": "KR2FTYSWRAZT4UGLG6YJZKXF"
+                                },
+                                {
+                                    "itemOptionId": "EXH5XNICOKWWFCFXBZQ7BM2B",
+                                    "itemOptionValueId": "UE6W6YL54HAW7Z3K7EDCDKQP"
+                                }
+                            ],
+                            "stockable": true
+                        }
+                    },
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "RX3RUOFAWRPXMFMDGZQMXSZN",
+                        "updatedAt": "2021-10-08T11:17:01.744Z",
+                        "version": "1633691821744",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "6HIQHVMPDDKYOGSPMGSTSXBC",
+                            "name": "Dark Roast, Large",
+                            "ordinal": 8,
+                            "pricingType": "VARIABLE_PRICING",
+                            "locationOverrides":
+                            [
+                                {
+                                    "locationId": "L7HZWG4R2G92Z",
+                                    "trackInventory": true
+                                }
+                            ],
+                            "itemOptionValues":
+                            [
+                                {
+                                    "itemOptionId": "HRXTFIAISZUAZGRTXMNROLKC",
+                                    "itemOptionValueId": "KR2FTYSWRAZT4UGLG6YJZKXF"
+                                },
+                                {
+                                    "itemOptionId": "EXH5XNICOKWWFCFXBZQ7BM2B",
+                                    "itemOptionValueId": "WFNJ2SB4LU636RLR42VOI5ZX"
+                                }
+                            ],
+                            "stockable": true
+                        }
+                    },
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "T7VJDDBR67B4OBMVQ5RNAOZS",
+                        "updatedAt": "2021-10-08T11:17:01.744Z",
+                        "version": "1633691821744",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "6HIQHVMPDDKYOGSPMGSTSXBC",
+                            "name": "Caramel, Small",
+                            "ordinal": 9,
+                            "pricingType": "VARIABLE_PRICING",
+                            "locationOverrides":
+                            [
+                                {
+                                    "locationId": "L7HZWG4R2G92Z",
+                                    "trackInventory": true
+                                }
+                            ],
+                            "itemOptionValues":
+                            [
+                                {
+                                    "itemOptionId": "HRXTFIAISZUAZGRTXMNROLKC",
+                                    "itemOptionValueId": "PARQABSP55S6VYODD527PPD6"
+                                },
+                                {
+                                    "itemOptionId": "EXH5XNICOKWWFCFXBZQ7BM2B",
+                                    "itemOptionValueId": "Z4MDHLOU3TVDMWUH3MYVEZVT"
+                                }
+                            ],
+                            "stockable": true
+                        }
+                    },
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "5HJADFOHZ6U4QM324YDA42PU",
+                        "updatedAt": "2021-10-08T11:17:01.744Z",
+                        "version": "1633691821744",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "6HIQHVMPDDKYOGSPMGSTSXBC",
+                            "name": "Caramel, Medium",
+                            "ordinal": 10,
+                            "pricingType": "VARIABLE_PRICING",
+                            "locationOverrides":
+                            [
+                                {
+                                    "locationId": "L7HZWG4R2G92Z",
+                                    "trackInventory": true
+                                }
+                            ],
+                            "itemOptionValues":
+                            [
+                                {
+                                    "itemOptionId": "HRXTFIAISZUAZGRTXMNROLKC",
+                                    "itemOptionValueId": "PARQABSP55S6VYODD527PPD6"
+                                },
+                                {
+                                    "itemOptionId": "EXH5XNICOKWWFCFXBZQ7BM2B",
+                                    "itemOptionValueId": "UE6W6YL54HAW7Z3K7EDCDKQP"
+                                }
+                            ],
+                            "stockable": true
+                        }
+                    },
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "VYWSFDMPP2BTFTBTJR3RGS22",
+                        "updatedAt": "2021-10-08T11:17:01.744Z",
+                        "version": "1633691821744",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "6HIQHVMPDDKYOGSPMGSTSXBC",
+                            "name": "Caramel, Large",
+                            "ordinal": 11,
+                            "pricingType": "VARIABLE_PRICING",
+                            "locationOverrides":
+                            [
+                                {
+                                    "locationId": "L7HZWG4R2G92Z",
+                                    "trackInventory": true
+                                }
+                            ],
+                            "itemOptionValues":
+                            [
+                                {
+                                    "itemOptionId": "HRXTFIAISZUAZGRTXMNROLKC",
+                                    "itemOptionValueId": "PARQABSP55S6VYODD527PPD6"
+                                },
+                                {
+                                    "itemOptionId": "EXH5XNICOKWWFCFXBZQ7BM2B",
+                                    "itemOptionValueId": "WFNJ2SB4LU636RLR42VOI5ZX"
+                                }
+                            ],
+                            "stockable": true
+                        }
+                    },
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "ZO77JTMEW47FY2GUZ6KQUKGR",
+                        "updatedAt": "2021-10-08T11:17:01.744Z",
+                        "version": "1633691821744",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "6HIQHVMPDDKYOGSPMGSTSXBC",
+                            "name": "Hazelnut, Small",
+                            "ordinal": 12,
+                            "pricingType": "VARIABLE_PRICING",
+                            "locationOverrides":
+                            [
+                                {
+                                    "locationId": "L7HZWG4R2G92Z",
+                                    "trackInventory": true
+                                }
+                            ],
+                            "itemOptionValues":
+                            [
+                                {
+                                    "itemOptionId": "HRXTFIAISZUAZGRTXMNROLKC",
+                                    "itemOptionValueId": "BRFDEGL663V7PQYT6KIEDYY7"
+                                },
+                                {
+                                    "itemOptionId": "EXH5XNICOKWWFCFXBZQ7BM2B",
+                                    "itemOptionValueId": "Z4MDHLOU3TVDMWUH3MYVEZVT"
+                                }
+                            ],
+                            "stockable": true
+                        }
+                    },
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "5RJEH43GHQZXLVEUGMMM5FHM",
+                        "updatedAt": "2021-10-08T11:17:01.744Z",
+                        "version": "1633691821744",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "6HIQHVMPDDKYOGSPMGSTSXBC",
+                            "name": "Hazelnut, Medium",
+                            "ordinal": 13,
+                            "pricingType": "VARIABLE_PRICING",
+                            "locationOverrides":
+                            [
+                                {
+                                    "locationId": "L7HZWG4R2G92Z",
+                                    "trackInventory": true
+                                }
+                            ],
+                            "itemOptionValues":
+                            [
+                                {
+                                    "itemOptionId": "HRXTFIAISZUAZGRTXMNROLKC",
+                                    "itemOptionValueId": "BRFDEGL663V7PQYT6KIEDYY7"
+                                },
+                                {
+                                    "itemOptionId": "EXH5XNICOKWWFCFXBZQ7BM2B",
+                                    "itemOptionValueId": "UE6W6YL54HAW7Z3K7EDCDKQP"
+                                }
+                            ],
+                            "stockable": true
+                        }
+                    },
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "OEHAW52SEMZN756NFPQWOJMX",
+                        "updatedAt": "2021-10-08T11:17:01.744Z",
+                        "version": "1633691821744",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "6HIQHVMPDDKYOGSPMGSTSXBC",
+                            "name": "Hazelnut, Large",
+                            "ordinal": 14,
+                            "pricingType": "VARIABLE_PRICING",
+                            "locationOverrides":
+                            [
+                                {
+                                    "locationId": "L7HZWG4R2G92Z",
+                                    "trackInventory": true
+                                }
+                            ],
+                            "itemOptionValues":
+                            [
+                                {
+                                    "itemOptionId": "HRXTFIAISZUAZGRTXMNROLKC",
+                                    "itemOptionValueId": "BRFDEGL663V7PQYT6KIEDYY7"
+                                },
+                                {
+                                    "itemOptionId": "EXH5XNICOKWWFCFXBZQ7BM2B",
+                                    "itemOptionValueId": "WFNJ2SB4LU636RLR42VOI5ZX"
+                                }
+                            ],
+                            "stockable": true
+                        }
+                    }
+                ],
+                "productType": "REGULAR",
+                "skipModifierScreen": false,
+                "itemOptions":
+                [
+                    {
+                        "itemOptionId": "HRXTFIAISZUAZGRTXMNROLKC"
+                    },
+                    {
+                        "itemOptionId": "EXH5XNICOKWWFCFXBZQ7BM2B"
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+.reward {
+	height: 70px;
+	width: 300px;
+	border: 1px dashed green;
+	/*border-radius: 5em;*/
+	padding: 0.6em;
+	/*margin: 0 auto;*/
+	font-weight: 900;
+	font-size: 1em;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	color: #000;
+	/*margin-left: 2em;*/
+}
+
+.gray {
+	color: darkgray;
+	border: 1px dashed darkgray;
+}
+.dark-green {
+	color: darkgreen;
+}
+.label-redeem {
+	color: darkorange;
+	font-size: 0.9em;
+	text-transform: uppercase;
+	display: block;
+	margin: 0 auto;
+}
+.label-ineligible {
+	color: lightpink;
+}
+
+h3 {
+	text-align: center;
+}
+
+.icon-circle {
+	color: darkorange;
+	display: inline-block;
+	/*padding-right: 0.2em;*/
+	font-size: 1.2em;
+	margin-top: 0.3em;
+	/*vertical-align: middle;*/
+}
+
+#minus-circle {
+	color: darkgray;
+}
+
+.bold-text {
+	font-weight: 900;
+}
