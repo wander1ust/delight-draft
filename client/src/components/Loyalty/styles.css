@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Merienda:wght@700&display=swap');
+
+:root {
+	--text-primary: #d44343;
+	--lightgreen: lightgreen;
+	--lightergreen: #dbf0e1;
+	--lightyellow: #fff2cc;
+}
 .reward {
 	height: 70px;
-	width: 300px;
-	border: 1px dashed green;
+	width: 320px;
+	border: 1px dashed gray;
 	/*border-radius: 5em;*/
 	padding: 0.6em;
 	/*margin: 0 auto;*/
@@ -11,9 +19,39 @@
 	text-align: center;
 	vertical-align: middle;
 	color: #000;
+	background-color: var(--lightyellow); /* #fff2cc */ /*#dbf0e1*/	
 	/*margin-left: 2em;*/
 }
-
+/*.reward-unlocked::after {
+	content: 'CLAIM REWARD';
+}*/
+.reward-active {
+	/*content: 'CLAIMING...';*/
+	background-color: var(--lightergreen);
+	border: 5px solid var(--lightgreen);
+	color: green !important;
+/*	background-color: #fff2cc;	
+	border: 5px solid gold;*/
+}
+.reward-unlocked {
+	color: #3f3d3d;
+}
+.reward-locked {
+	color: darkgray;
+	border: 1px dashed darkgray;	
+	background-color: #eeeeee;
+}
+.message {
+	padding: 0.3em 0;
+	/*background-color: #fff2cc;*/
+	width: 100%;
+	/*margin: 3em auto;*/
+	color: #39b20e;	/* #e26917 */
+	position: relative;
+	margin-left: auto;
+	/*top: 5em;*/
+	float: right;
+}
 .gray {
 	color: darkgray;
 	border: 1px dashed darkgray;
@@ -22,18 +60,14 @@
 	color: darkgreen;
 }
 .label-redeem {
-	color: darkorange;
+	color: #e26917;
 	font-size: 0.9em;
 	text-transform: uppercase;
 	display: block;
 	margin: 0 auto;
 }
 .label-ineligible {
-	color: lightpink;
-}
-
-h3 {
-	text-align: center;
+	color: #ea8286;
 }
 
 .icon-circle {
@@ -49,6 +83,62 @@ h3 {
 	color: darkgray;
 }
 
-.bold-text {
+.text-bold {
 	font-weight: 900;
+}
+.text-center {
+	text-align: center;
+}
+.show {
+	display: block;
+}
+.hide {
+	display: none;
+}
+.fade {	
+	/*opacity: 0;*/
+    /*transition: all 250ms linear 1s;*/
+  -webkit-animation: fadeout 1s linear forwards;
+  /*animation: fadein 0 linear forwards;*/
+  animation: fadeout 1s linear forwards;
+  /*opacity: 0;*/
+}
+#flower-emoji {
+	font-size: 0.7em;
+}
+#title {
+	/*font-family: 'Courgette';*/
+	font-family: 'Marker Felt';
+	/*letter-spacing: 0.01em;*/
+	font-size: 2.3em;
+	color: var(--text-primary);
+	/*font-weight: 900;*/
+}
+p {
+	font-size: 1.2em;
+}
+
+@keyframes fadein {
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }  
+}
+
+@keyframes fadeout {
+  50% {
+    /*opacity: 1;*/
+    height: 2em;
+  }
+/*  95% {
+    opacity: 0;
+    height: 2em;
+  } */ 
+  100% {
+    /*display: none;*/
+    opacity: 0;
+    height: 0;
+  }
 }

@@ -9,7 +9,7 @@ export default makeStyles(() => ({
   },
   media: {
     height: 0,
-    paddingTop: '56.25%', // 16:9
+    paddingTop: '56.25%', // 16:9     
   },
   cardActions: {
     display: 'flex',
@@ -68,6 +68,16 @@ export default makeStyles(() => ({
     display: 'inline-block',
     padding: '0.2em 0.5em',
     marginLeft: '0.5em',
-    color: '#003b4a'
+    color: '#003b4a',
+    cursor: 'default'
+  },
+  borderGreen: {
+    border: '3px solid lightgreen'
+  },  
+  borderGray: {
+    border: '3px solid gray'
+  },
+  borderDefault: {
+    border: '1px solid gray'
   }
 }));

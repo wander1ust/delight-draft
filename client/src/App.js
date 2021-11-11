@@ -9,6 +9,8 @@ import { commerce } from './lib/commerce';
 import { useSelector, useDispatch } from "react-redux";
 import { bindActionCreators } from 'redux';
 import { actionCreators } from "./state/index";
+import './App.css';
+import './index.css';
 
 
 const App = () => {
@@ -57,9 +59,10 @@ const App = () => {
     setCart(await commerce.cart.retrieve());
   };
 
-  const handleAddToCart = async (productId, quantity) => {
+  const handleAddToCart = async (product, quantity) => {
     // const item = await commerce.cart.add(productId, quantity);
-    addItemToCart(productId, 1);    
+    addItemToCart(product, 1);    
+    // addItemToCart(productId, 1);    
     console.log('cart state: ' + JSON.stringify(state));
     // setCart(state);
   };

@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardMedia, CardContent, CardActions, Typography, IconButton, Box } from '@material-ui/core';
 import { withStyles } from "@material-ui/core/styles";
 import { AddShoppingCart } from '@material-ui/icons';
 
 import useStyles from './styles';
 
-const Product = ({ product, catalogImages, onAddToCart, handleUpdateCartQty, reward }) => {
+const Product = ({ product, catalogImages, onAddToCart, handleUpdateCartQty, selectedReward, onClick }) => {
   const classes = useStyles();
   const { itemData } = product;
   const { name, description, categoryId, variations } = itemData;
+  const [rewardItemId, setRewardItemId] = useState('');
+  const [itemVariations, setItemVariations] = useState([]);
+  const [variationItemIndex, setVariationItemIndex] = useState(0);
+  // const [hasTwoBorderColors, sethasTwoBorderColors] = useState(false);
+  const [forbiddenVariationChange, setForbiddenVariationChange] = useState(false);
 
   const PriceTypography = withStyles({
     root: {
@@ -22,27 +27,106 @@ const Product = ({ product, catalogImages, onAddToCart, handleUpdateCartQty, rew
     }
   })(Typography);  
 
-  const getImageUrlById = (image_id) => {
-    if (catalogImages) {
-      // const firstImage = catalogImages[0];
-      // return firstImage;
-      // return (catalogImages.find(image => image.id == image_id) || {}).execs || [];
-      const image = catalogImages.find(image => {
-        return image.id === image_id;
-      })
-        // return (this.repInfo.find(el => el.id == tourId) || {}).execs || [];
-      // let found_user = response.data.find(acc=>{ //found_user is always undefined
-      //   return acc.username == user_to_find;
-      // })
-      console.log('image: ' + JSON.stringify(image));
-      return image;
-      // console.log('image.url: ' + image.url);
-      // console.log('image.id: ' + image.id);
-      // JSON.stringify(image);
-      // return image.imageData.url;
-      // return JSON.stringify(image);
-      // return JSON.stringify(catalogImages[0]);
+  const doesItemMatchReward = () => {    
+    if (selectedReward && product) {
+      let catalogItemId = '';
+      let result;    
+    
+      switch(selectedReward.info.scope) {
+        case 'ITEM_VARIATION':
+          result = variations.find(variation => variation.id === rewardItemId);
+          break;
+        case 'CATEGORY':
+          result = categoryId === rewardItemId;
+          break;
+        case 'ITEM':  
+        default:  
+          catalogItemId = variations[0].id;      
+      }       
+      console.log(selectedReward);
+      return result;
     }
+  }
+
+  const handleVariationClick = (e, variation) => {
+    const itemId = e.target.getAttribute('id');
+    const itemIndex = getItemIndex(itemId);
+    // const twoBorders = e.target.classList.contains(classes.borderGreen) && e.target.classList.contains(classes.borderGray);    
+    // if (twoBorders) {
+    //   sethasTwoBorderColors(true);
+    // } else {
+    //   sethasTwoBorderColors(false);
+    // }
+
+    if (rewardItemId !== variation.id && selectedReward.info.scope !== 'CATEGORY') {
+      alert('no');
+      setForbiddenVariationChange(true);
+    } else {
+      setForbiddenVariationChange(false);
+    }
+    // const itemIndex = itemVariations.findIndex(item => {
+    //   return item.id === itemId;
+    // })
+    // onClick({id: item.id, name: item.name, price: item.price});
+    onClick(itemVariations[itemIndex]);
+    setVariationItemIndex(itemIndex);
+    console.log(`variationItem: ` + JSON.stringify(itemVariations[itemIndex]));
+  }    
+
+  const getItemIndex = (id) => {
+    const index = itemVariations.findIndex(item => {
+      return item.id === id;
+    })
+    return index;
+  }
+
+  const borderStyle = (variation, i) => {
+    if (selectedReward && rewardItemId == variation.id) {
+      return classes.borderGreen;
+    } 
+    // else {
+    //   return classes.borderDefault;
+    // }
+    if (i === variationItemIndex && !forbiddenVariationChange) {
+      return classes.borderGray;
+    }
+  }
+
+  const showItemVariations = () => { 
+    let arr = [];
+    itemVariations.map((variation, i) => {
+      // console.log(`variation ID: ${variation.id}`);
+      // if (selectedReward) {      
+      //   console.log(`reward variation ID: ${rewardItemId}`);
+      // }
+        arr.push(
+          <div id={`${variation.id}`} className={`${classes.itemVariation} ${classes.boldText} ${borderStyle(variation, i)}`} onClick={(e) => handleVariationClick(e, variation)} /*ref={itemVariation}*/>{variation.name}</div>
+        )
+    })
+    return arr;
+  }   
+
+  const hasMultipleVariations = variations.length > 0;
+   
+  const setItemVariationsData = () => {  
+    let arr = [];  
+    if (hasMultipleVariations) {      
+      variations.map(variation => {
+        arr.push(getVariationData(variation));
+      })
+    }
+    setItemVariations(arr);
+    return arr;
+  }
+
+  const getVariationData = (variation) => { 
+    const data = variation.itemVariationData;
+    return {
+      id: variation.id, 
+      name: data.name, 
+      price: convertToUSD(data.priceMoney.amount),
+      imageId: product.imageId
+    };
   }
 
   const convertToUSD = (cents) => {
@@ -57,37 +141,57 @@ const Product = ({ product, catalogImages, onAddToCart, handleUpdateCartQty, rew
     }
   }
 
-  const doesItemMatchReward = () => {    
-    if (reward && product) {
-      // alert(reward);
-      // console.log('doesItemMatchReward: ' + itemData.categoryId);
-     return reward.catalogObjectIds[0] === categoryId;
-    }
-    return (reward && (reward.scope === 'ITEM_VARIATION') && (reward.catalogObjectIds[0] === variations[0].id));
-  }    
-
-  const showItemVariations = () => { 
-    let arr = [];
-    getItemVariationsData().map(variation => {
-      arr.push(<div className={`${classes.itemVariation} ${classes.boldText}`}>{variation.name}</div>)
-    })
-    return arr;
-  }   
-  const getItemVariationsData = () => {  
-    let arr = [];  
-    if (variations.length > 1) {      
-      variations.map(variation => {
-        const data = variation.itemVariationData;
-        const obj = {name: data.name, price: convertToUSD(data.priceMoney.amount)};
-        arr.push(obj);
+  const getImageUrlById = (image_id) => {
+    if (catalogImages) {
+      const image = catalogImages.find(image => {
+        return image.id === image_id;
       })
+      console.log('image: ' + JSON.stringify(image));
+      return image;
     }
-    return arr;
   }
 
-  const handleAddToCart = () => onAddToCart(product.id, 1);
-/*image={require('../../../assets/burger.jpg').default}*/
+  const hasVariations = variations.length > 1;
+
+  // const handleAddToCart = () => onAddToCart(product.id, 1);
+  const handleAddToCart = () => {
+    console.log(`variations OK: ${JSON.stringify(variationItemIndex)}`);
+    // if (variations.length == 1) {
+    //   setVariationItemIndex(0)
+    // }    
+    if (variationItemIndex) {
+      onAddToCart(itemVariations[variationItemIndex], 1);
+    //   console.log('no good: ' + JSON.stringify(itemVariations));
+    //   console.log('no good variationItemIndex: ' + JSON.stringify(variationItemIndex));
+      
+    } else {
+      console.log('no good: ' + JSON.stringify(itemVariations));
+      onAddToCart(itemVariations[0], 1);
+    }
+
+
+    // if (itemVariation) {
+    //   onAddToCart(itemVariation, 1);
+    // } else {
+    //   const regularItem = {getVariationData()}
+    //   onAddToCart(product, 1);
+    // }
+    // onAddToCart(product.id, 1);
+  }
+
+  useEffect(() => {
+    setItemVariationsData();
+    console.log('setItemVariationsData: ' + JSON.stringify(itemVariations));
+  }, [])  
+
+  useEffect(() => {
+    if (selectedReward) { 
+      setRewardItemId(selectedReward.info.catalogObjectIds[0]);
+    }
+  }, [selectedReward])
+
   return (
+    // {async () => {return product}} &&
     <Card className={`${classes.root}, ${doesItemMatchReward() ? classes.highlight : null}`}>
       <CardMedia className={classes.media} image={catalogImages.length ? getImageUrlById(product.imageId).imageData.url : require('../../../assets/imgs/tomato-cheese-panini.jpg').default} title={name} />
        <div className={doesItemMatchReward() ? classes.rewardLabel : null}>
@@ -104,7 +208,7 @@ const Product = ({ product, catalogImages, onAddToCart, handleUpdateCartQty, rew
           </BoldTypography>
           {/*<Typography gutterBottom variant="h5" component="h2" color="primary">*/}
           <PriceTypography variant="h6">
-          ${variations.length === 1 ? showPrice() : showPrice() + ' - ' + convertToUSD(variations[variations.length - 1].itemVariationData.priceMoney.amount)}
+          ${hasVariations ? showPrice() + ' - ' + convertToUSD(variations[variations.length - 1].itemVariationData.priceMoney.amount) : showPrice()}
           </PriceTypography>
           {/*</Typography>*/}
         </div>

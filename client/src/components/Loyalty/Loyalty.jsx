@@ -1,28 +1,40 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { IconContext } from "react-icons";
 import { AiOutlineCheckCircle, AiFillCheckCircle, AiFillMinusCircle } from "react-icons/ai";
 import { AiOutlineCheckSquare, AiFillCheckSquare, AiFillMinusSquare } from "react-icons/ai";
+import { FaCartPlus } from "react-icons/fa";
 import './styles.css';
 
-const Loyalty = ({ loyalty, onClick }) => {
+const Loyalty = ({ loyalty, onClick, selectedReward, variationItem }) => {
 	const { balance } = loyalty
+	const [messageVisible, setMessageVisible] = useState(false);
+	const [rewardActive, setRewardActive] = useState(null);
 
-	const handleRewardClick = (rewardInfo) => {
-        onClick(rewardInfo);
+	const handleRewardClick = (e, rewardInfo) => {
+		// activateReward();
+		const id = e.target.getAttribute('id');
+        onClick({id: id, info: rewardInfo});
+        setRewardActive(true);	   
+	   	setMessageVisible(true);
+	   
+	    setTimeout(() => {
+	      setMessageVisible(false);
+	    }, 2000);        
         // onClick(JSON.stringify(rewardInfo));
+        // ${selectedReward == rewardInfo ? 'reward-active' : 'reward-inactive'}
     }
 
 	// name, discountType, amount, points
 	const renderRewards = () => {
 		let arr = [];
 		if (loyalty && loyalty.rewards) {
-			loyalty.rewards.map(reward => {
+			loyalty.rewards.map((reward, i) => {
 				const { definition } = reward;
 				const { scope, catalogObjectIds, discountType, percentageDiscount } = definition;
 				const rewardInfo = {scope: scope, catalogObjectIds: catalogObjectIds, discountType: discountType, percentageDiscount};
 				arr.push(
-					<div className={`reward ${isRewardRedeemable(reward) ? 'dark-green' : 'gray'}`}> 
-						{renderCheckIcon(reward, rewardInfo)}
+					<div ref={rewardCoupon} className={`reward ${isRewardRedeemable(reward) ? 'reward-unlocked' : 'reward-locked'} ${rewardActive && selectedReward && selectedReward.id.slice(-1) == i ? 'reward-active' : ''}`}> 
+						{renderButton(reward, rewardInfo, i)}
 						{reward.name} &nbsp; {reward.points} pts. 
 					</div>
 				);
@@ -35,11 +47,11 @@ const Loyalty = ({ loyalty, onClick }) => {
 		return loyalty.balance >= reward.points;
 	}
 	
-	const renderCheckIcon = (reward, rewardInfo) => {
+	const renderButton = (reward, rewardInfo, i) => {
 		if (isRewardRedeemable(reward)) {	
 	        return <>
-		        {/*<div className='label-redeem'>Click to redeem</div> */}
-		        <button className='label-redeem bold-text' onClick={() => {handleRewardClick(rewardInfo)}}>Claim Reward</button>	         
+		        <button id={`reward-${i}`} ref={rewardCoupon} className={`label-redeem text-bold`} onClick={(e) => handleRewardClick(e, rewardInfo)}>CLAIM REWARD</button>	
+		         
 		        <AiOutlineCheckSquare id='outline-check-circle' className='icon-circle' />	
 	        </>			
 		} else {
@@ -50,12 +62,33 @@ const Loyalty = ({ loyalty, onClick }) => {
 			// return <AiFillCheckCircle className='check-circle' />
 		}		
 	}	
+	// setTimeout(() => {return 'hide'}, 3000)
+	const renderMessage = () => {
+		if (selectedReward) {
+			return <h3 className={`message text-bold ${messageVisible ? 'show' : 'fade'}`} onTransitionEnd={() => setMessageVisible(false)}>Please choose a Reward item to add to cart <FaCartPlus /> </h3>
+		}
+	}
+
+	const rewardCoupon = useRef(null);
+
+    const activateReward = () => {
+	    // rewardCoupon.current.style.backgroundColor('#dbf0e1');
+	    rewardCoupon.current.classList.remove('reward-unlocked');
+	    rewardCoupon.current.classList.add('reward-active');
+	}	
+
+	// useEffect(() => {
+	// 	// if (variationItemPrice) { 
+	// 	// }
+	// }, [variationItemPrice])	
 
 	return (		
-		<>		 		
-			<h3> My Loyalty Balance: {loyalty.balance} points</h3>
+		<div className='text-center'>		 		
+			<div id='title' className='text-bold'> L{/*<span id='flower-emoji'>🌺</span>*/}oyalty Rewards </div>
+			<p>My Account Balance: {Number(loyalty.balance) + Number(variationItem.price)} points</p>
 			{loyalty && renderRewards()} 
-		</>
+			{renderMessage()}
+		</div>
 
 	);
 }

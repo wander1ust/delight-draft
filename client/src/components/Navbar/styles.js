@@ -10,6 +10,7 @@ export default makeStyles((theme) => ({
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
     },
+    // borderBottom: '2px solid #d44343'
     // backgroundColor: '#000' /*#b10d0d*/
   },
   title: {
@@ -22,7 +23,7 @@ export default makeStyles((theme) => ({
     color: '#b10d0d'
   },
   logo: {
-    color: '#eb8519',
+    color: '#e26917', /* #eb8519 */
     fontWeight: 900
   },
   image: {
