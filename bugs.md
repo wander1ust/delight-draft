@@ -1,7 +1,5 @@
 ## 🦋  BUGS  🦋 
 ### ❎ NOT WORKING - I KNOW WHY 👩🏻‍💻
-**Bug**: selecting item variation -> selecting reward of different variation for same item = 2 border colors visible <br/>
-**Expected:** only show green border
 <hr/>
 
 ### ❌ NOT WORKING - IDK WHY 🤷🏻‍♀️
@@ -14,8 +12,7 @@ const { products } = require(path.join(__dirname, '../controllers'));
 ```
 
 **`proxy in server/package.json`** is ignored - why? (no webpack)
-
-<br/>
+<hr/>
 
 ## Debugged  🥳
 
@@ -40,7 +37,10 @@ const { products } = require(path.join(__dirname, '../controllers'));
 ```
 #### *** containsItem.length > 0 *** 😑 👍 
 #### 
+
 <hr/>
 
+🆗 **Bug**: change to item variation reward = 2 border colors visible <br/>
+&nbsp; &nbsp;&nbsp; **Expected:** only show green border
 
 

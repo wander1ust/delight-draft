@@ -9,15 +9,19 @@ const Product = ({ product, catalogImages, onAddToCart, handleUpdateCartQty, sel
   const classes = useStyles();
   const { itemData } = product;
   const { name, description, categoryId, variations } = itemData;
+
   const [rewardItemId, setRewardItemId] = useState('');
   const [itemVariations, setItemVariations] = useState([]);
   const [variationItemIndex, setVariationItemIndex] = useState(0);
-  // const [hasTwoBorderColors, sethasTwoBorderColors] = useState(false);
-  const [forbiddenVariationChange, setForbiddenVariationChange] = useState(false);
+  const [forbiddenVariationChange, setForbiddenVariationChange] = useState(0);
+  const [itemRewardIneligible, setItemRewardIneligible] = useState(false);
+  
+  const hasMultipleVariations = variations.length > 0;  
+  const hasVariations = variations.length > 1;
 
   const PriceTypography = withStyles({
     root: {
-      color: "green",
+      color: "darkgreen",
       fontWeight: 900
     }
   })(Typography);   
@@ -32,14 +36,13 @@ const Product = ({ product, catalogImages, onAddToCart, handleUpdateCartQty, sel
       let catalogItemId = '';
       let result;    
     
-      switch(selectedReward.info.scope) {
+      switch(rewardType()) {
         case 'ITEM_VARIATION':
           result = variations.find(variation => variation.id === rewardItemId);
           break;
         case 'CATEGORY':
           result = categoryId === rewardItemId;
           break;
-        case 'ITEM':  
         default:  
           catalogItemId = variations[0].id;      
       }       
@@ -48,65 +51,61 @@ const Product = ({ product, catalogImages, onAddToCart, handleUpdateCartQty, sel
     }
   }
 
+  const doesItemVariationMatchReward = (variation) => { 
+    return selectedReward && rewardItemId == variation.id;  
+  }     
+
   const handleVariationClick = (e, variation) => {
     const itemId = e.target.getAttribute('id');
     const itemIndex = getItemIndex(itemId);
-    // const twoBorders = e.target.classList.contains(classes.borderGreen) && e.target.classList.contains(classes.borderGray);    
-    // if (twoBorders) {
-    //   sethasTwoBorderColors(true);
-    // } else {
-    //   sethasTwoBorderColors(false);
-    // }
+    const variationItem = itemVariations[itemIndex];
 
-    if (rewardItemId !== variation.id && selectedReward.info.scope !== 'CATEGORY') {
-      alert('no');
-      setForbiddenVariationChange(true);
-    } else {
-      setForbiddenVariationChange(false);
-    }
-    // const itemIndex = itemVariations.findIndex(item => {
-    //   return item.id === itemId;
-    // })
-    // onClick({id: item.id, name: item.name, price: item.price});
-    onClick(itemVariations[itemIndex]);
+    onClick(variationItem);
     setVariationItemIndex(itemIndex);
-    console.log(`variationItem: ` + JSON.stringify(itemVariations[itemIndex]));
+    console.log(`variationItem: ` + JSON.stringify(itemVariations[itemIndex]));    
+
+    if (selectedReward && rewardItemId !== variation.id && isItemVariationReward) {
+      setForbiddenVariationChange(true);
+    } 
+    setTimeout(() => {
+      setForbiddenVariationChange(false);
+    }, 2000)
   }    
 
-  const getItemIndex = (id) => {
-    const index = itemVariations.findIndex(item => {
-      return item.id === id;
-    })
-    return index;
+  const renderInvalidRewardItemMsg = () => {
+    let style = `${classes.redText} ${classes.smallText} ${classes.centerText} `;
+    const hidden = style + `${classes.hide}`;
+    const visible = style + `${classes.show}`;
+    style = hidden;
+    if (isItemVariationReward && forbiddenVariationChange) {
+     style = visible;
+    }
+   return <p className={style}> This option is not eligible for reward &#x1F615; </p>
   }
 
-  const borderStyle = (variation, i) => {
-    if (selectedReward && rewardItemId == variation.id) {
+  const borderStyle = (variation, i) => {    
+    const eligibleRewardItem = doesItemVariationMatchReward(variation);
+
+    if (isItemVariationReward && eligibleRewardItem) {
       return classes.borderGreen;
-    } 
-    // else {
-    //   return classes.borderDefault;
-    // }
-    if (i === variationItemIndex && !forbiddenVariationChange) {
+    }         
+    if (isItemVariationReward && !eligibleRewardItem) {
+      return classes.borderDefault;
+    }     
+    if (i === variationItemIndex) {
       return classes.borderGray;
-    }
+    } 
   }
 
   const showItemVariations = () => { 
     let arr = [];
     itemVariations.map((variation, i) => {
-      // console.log(`variation ID: ${variation.id}`);
-      // if (selectedReward) {      
-      //   console.log(`reward variation ID: ${rewardItemId}`);
-      // }
         arr.push(
           <div id={`${variation.id}`} className={`${classes.itemVariation} ${classes.boldText} ${borderStyle(variation, i)}`} onClick={(e) => handleVariationClick(e, variation)} /*ref={itemVariation}*/>{variation.name}</div>
         )
     })
     return arr;
-  }   
-
-  const hasMultipleVariations = variations.length > 0;
+  }     
    
   const setItemVariationsData = () => {  
     let arr = [];  
@@ -151,7 +150,20 @@ const Product = ({ product, catalogImages, onAddToCart, handleUpdateCartQty, sel
     }
   }
 
-  const hasVariations = variations.length > 1;
+  const getItemIndex = (id) => {
+    const index = itemVariations.findIndex(item => {
+      return item.id === id;
+    })
+    return index;
+  }
+
+  const rewardType = () => {
+    if (selectedReward) {
+      return selectedReward.info.scope;
+    }
+  }     
+
+  const isItemVariationReward = rewardType() === 'ITEM_VARIATION';
 
   // const handleAddToCart = () => onAddToCart(product.id, 1);
   const handleAddToCart = () => {
@@ -192,7 +204,7 @@ const Product = ({ product, catalogImages, onAddToCart, handleUpdateCartQty, sel
 
   return (
     // {async () => {return product}} &&
-    <Card className={`${classes.root}, ${doesItemMatchReward() ? classes.highlight : null}`}>
+    <Card className={`${classes.root} ${doesItemMatchReward() ? classes.highlight : null}`}>
       <CardMedia className={classes.media} image={catalogImages.length ? getImageUrlById(product.imageId).imageData.url : require('../../../assets/imgs/tomato-cheese-panini.jpg').default} title={name} />
        <div className={doesItemMatchReward() ? classes.rewardLabel : null}>
           </div>
@@ -217,7 +229,12 @@ const Product = ({ product, catalogImages, onAddToCart, handleUpdateCartQty, sel
         </Typography>    
         <p className={classes.rating}>⭐️⭐️⭐️⭐️⭐️</p> 
         {showItemVariations()}
-        <p className={classes.points, classes.boldText}> +10 points</p>           
+
+     {/*   <p className={`${classes.redText}, ${classes.boldText}, ${forbiddenVariationChange ? classes.show + ', ' + classes.redText : (rewardType() == 'ITEM_VARIATION' ? classes.fade : classes.hide)}`}> This item is not eligible for reward <HiOutlineEmojiSad /> </p>*/}
+        
+      {renderInvalidRewardItemMsg()}
+
+        <p className={classes.points + ', ' + classes.boldText}> +10 points</p>           
        {/* <Typography dangerouslySetInnerHTML={{ __html: product.itemData.description }} variant="body2" color="textSecondary" component="p" />*/}
       </CardContent>
       <CardActions disableSpacing className={classes.cardActions}>

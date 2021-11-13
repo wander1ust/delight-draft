@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
+// import './animate.css';
 
 export default makeStyles(() => ({
   root: {
@@ -20,11 +21,12 @@ export default makeStyles(() => ({
     justifyContent: 'space-between',
   },
   points: {
-    marginLeft: '5em',
+    // marginLeft: '5em',
     display: 'inline-block'
   },  
   rating: {
-    display: 'inline-block'
+    display: 'inline-block !important',
+    position: 'relative'
   },
   highlight: {
     border: '5px solid lightgreen',
@@ -58,8 +60,18 @@ export default makeStyles(() => ({
   block: {
     display: 'block'
   },
+  centerText: {
+    textAlign: 'center'
+  },  
   boldText: {
     fontWeight: 900
+  },
+  redText: {
+    color: 'darkred !important'
+  },
+  smallText: {
+    fontSize: '1.2em',
+    fontFamily: 'Marker Felt'
   },
   itemVariation: {
     border: '1px solid gray',
@@ -79,5 +91,21 @@ export default makeStyles(() => ({
   },
   borderDefault: {
     border: '1px solid gray'
+  },
+  borderNone: {
+    border: 'none'
+  },
+  fade: {     
+    animation: 'fadeout 1s linear forwards',
+    '-webkitAnimation': `fadeout 1s linear forwards`
+  },
+  '@keyframes fadeout': {  
+    '50%': {
+      height: '2em'
+    },
+    '100%': {
+      opacity: 0,
+      height: 0
+    }
   }
 }));

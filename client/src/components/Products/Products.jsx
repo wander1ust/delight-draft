@@ -38,7 +38,7 @@ const Products = ({ products, catalogImages, loyalty, onAddToCart, handleUpdateC
       <Grid className={classes.products} container justify="center" spacing={4}>
         {products.map(product => (
           <Grid /*className={doesItemMatchReward(product) ? classes.highlight + ', ' + classes.show : classes.hide}*/ key={product.itemData.id} item xs={12} sm={6} md={4} lg={3}>
-            <Product product={product} catalogImages={catalogImages} loyalty={loyalty} onAddToCart={onAddToCart} handleUpdateCartQty={handleUpdateCartQty} selectedReward={selectedReward} onClick={(e) => {handleVariationClick(e)}} />
+            <Product product={product} catalogImages={catalogImages} loyalty={loyalty} onAddToCart={onAddToCart} handleUpdateCartQty={handleUpdateCartQty} selectedReward={selectedReward} variationItem={variationItem} onClick={(e) => {handleVariationClick(e)}} />
           </Grid>
         ))}
       </Grid>
