@@ -1,0 +1,118 @@
+// Loyalty Program
+{
+    "program":
+    {
+        "id": "0bf55dd3-c1ee-4279-8653-64898e8fb637",
+        "status": "ACTIVE",
+        "rewardTiers":
+        [
+            {
+                "id": "b72593fe-4a6c-4503-8c88-674b45ad57db",
+                "points": 15,
+                "name": "1 Free Small Coffee",
+                "definition":
+                {
+                    "scope": "ITEM_VARIATION",
+                    "discountType": "FIXED_PERCENTAGE",
+                    "percentageDiscount": "100",
+                    "catalogObjectIds":
+                    [
+                        "OLO5TO5RW6EF5ADBH3VAEDMH"
+                    ]
+                },
+                "createdAt": "2021-11-02T17:52:29Z",
+                "pricingRuleReference":
+                {
+                    "objectId": "DBLSCFA3AMRAG6RY6FKUFWFO",
+                    "catalogVersion": "1635875549910"
+                }
+            },
+            {
+                "id": "14a2a4d1-ada0-408b-86f9-e50b7dbb13d4",
+                "points": 20,
+                "name": "1 Free Large Beverage",
+                "definition":
+                {
+                    "scope": "CATEGORY",
+                    "discountType": "FIXED_PERCENTAGE",
+                    "percentageDiscount": "100",
+                    "catalogObjectIds":
+                    [
+                        "UC6L3ZTEA7PWITPE3NLYVRX6"
+                    ]
+                },
+                "createdAt": "2021-11-05T12:19:15Z",
+                "pricingRuleReference":
+                {
+                    "objectId": "ITDD3EKRZLUEN3E4CNZ5RAJJ",
+                    "catalogVersion": "1636114755962"
+                }
+            },
+            {
+                "id": "03f1d2fb-10d8-4dac-aa9f-5f67cdc81c02",
+                "points": 50,
+                "name": "10% off entire sale",
+                "definition":
+                {
+                    "scope": "ORDER",
+                    "discountType": "FIXED_PERCENTAGE",
+                    "percentageDiscount": "10"
+                },
+                "createdAt": "2021-11-01T19:42:47Z",
+                "pricingRuleReference":
+                {
+                    "objectId": "T5LIYP5TAWFH5HC2QQGMRSBG",
+                    "catalogVersion": "1635795768162"
+                }
+            },
+            {
+                "id": "6c279a61-0fe7-4f4f-87d1-4e1aba91f222",
+                "points": 80,
+                "name": "$2.00 off any item in Classics",
+                "definition":
+                {
+                    "scope": "CATEGORY",
+                    "discountType": "FIXED_AMOUNT",
+                    "catalogObjectIds":
+                    [
+                        "YK244TQICGY4GKVLOOVWND7Z"
+                    ],
+                    "fixedDiscountMoney":
+                    {
+                        "amount": "200",
+                        "currency": "USD"
+                    }
+                },
+                "createdAt": "2021-11-05T12:19:15Z",
+                "pricingRuleReference":
+                {
+                    "objectId": "FEKIJBTJOUS7EZSAEON2LVEA",
+                    "catalogVersion": "1636114755913"
+                }
+            }
+        ],
+        "terminology":
+        {
+            "one": "Point",
+            "other": "Points"
+        },
+        "locationIds":
+        [
+            "LDMCJ6Q2MR017"
+        ],
+        "createdAt": "2021-11-01T19:36:52Z",
+        "updatedAt": "2021-11-05T12:19:16Z",
+        "accrualRules":
+        [
+            {
+                "accrualType": "SPEND",
+                "points": 1,
+                "spendAmountMoney":
+                {
+                    "amount": "100",
+                    "currency": "USD"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,1041 @@
+{
+    "objects":
+    [
+        {
+            "type": "ITEM",
+            "id": "T6UUIS6ZARIY25RXDPYX4MAY",
+            "updatedAt": "2021-11-01T08:32:13.558Z",
+            "version": "1635755533558",
+            "isDeleted": false,
+            "presentAtAllLocations": false,
+            "presentAtLocationIds":
+            [
+                "LDMCJ6Q2MR017"
+            ],
+            "imageId": "M2T2JS6JJYQCZJI3OJ7OBHVA",
+            "itemData":
+            {
+                "name": "Chicken Pot Pie",
+                "description": "Homestyle chicken pot pie",
+                "categoryId": "YK244TQICGY4GKVLOOVWND7Z",
+                "variations":
+                [
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "MQMTSFM7F6UDI53CWO2K5WGI",
+                        "updatedAt": "2021-10-31T15:18:58.415Z",
+                        "version": "1635693538415",
+                        "isDeleted": false,
+                        "presentAtAllLocations": false,
+                        "presentAtLocationIds":
+                        [
+                            "LDMCJ6Q2MR017"
+                        ],
+                        "itemVariationData":
+                        {
+                            "itemId": "T6UUIS6ZARIY25RXDPYX4MAY",
+                            "name": "Regular",
+                            "ordinal": 1,
+                            "pricingType": "FIXED_PRICING",
+                            "priceMoney":
+                            {
+                                "amount": "1000",
+                                "currency": "USD"
+                            },
+                            "stockable": true
+                        }
+                    }
+                ],
+                "productType": "REGULAR",
+                "skipModifierScreen": false
+            }
+        },
+        {
+            "type": "ITEM",
+            "id": "HVWP57ZD67RJ5DSF6HQHEXVQ",
+            "updatedAt": "2021-11-01T08:32:49.187Z",
+            "version": "1635755569187",
+            "isDeleted": false,
+            "presentAtAllLocations": false,
+            "presentAtLocationIds":
+            [
+                "LDMCJ6Q2MR017"
+            ],
+            "imageId": "FAJNYLCDPCPXGKIE7EBHM6H6",
+            "itemData":
+            {
+                "name": "Coffee",
+                "description": "Iced or Hot Coffee in a variety of flavors \n(Vanilla, Mocha, Caramel, Hazelnut)",
+                "categoryId": "UC6L3ZTEA7PWITPE3NLYVRX6",
+                "variations":
+                [
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "OLO5TO5RW6EF5ADBH3VAEDMH",
+                        "updatedAt": "2021-10-31T15:18:58.415Z",
+                        "version": "1635693538415",
+                        "isDeleted": false,
+                        "presentAtAllLocations": false,
+                        "presentAtLocationIds":
+                        [
+                            "LDMCJ6Q2MR017"
+                        ],
+                        "itemVariationData":
+                        {
+                            "itemId": "HVWP57ZD67RJ5DSF6HQHEXVQ",
+                            "name": "Small",
+                            "ordinal": 1,
+                            "pricingType": "FIXED_PRICING",
+                            "priceMoney":
+                            {
+                                "amount": "375",
+                                "currency": "USD"
+                            },
+                            "stockable": true
+                        }
+                    },
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "WLISWU7EOMNM4WXTD2NUMXJX",
+                        "updatedAt": "2021-10-31T15:18:58.415Z",
+                        "version": "1635693538415",
+                        "isDeleted": false,
+                        "presentAtAllLocations": false,
+                        "presentAtLocationIds":
+                        [
+                            "LDMCJ6Q2MR017"
+                        ],
+                        "itemVariationData":
+                        {
+                            "itemId": "HVWP57ZD67RJ5DSF6HQHEXVQ",
+                            "name": "Medium",
+                            "ordinal": 2,
+                            "pricingType": "FIXED_PRICING",
+                            "priceMoney":
+                            {
+                                "amount": "475",
+                                "currency": "USD"
+                            },
+                            "stockable": true
+                        }
+                    },
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "AZWBF33LABWTAYGXFWJWJWFN",
+                        "updatedAt": "2021-10-31T15:18:58.415Z",
+                        "version": "1635693538415",
+                        "isDeleted": false,
+                        "presentAtAllLocations": false,
+                        "presentAtLocationIds":
+                        [
+                            "LDMCJ6Q2MR017"
+                        ],
+                        "itemVariationData":
+                        {
+                            "itemId": "HVWP57ZD67RJ5DSF6HQHEXVQ",
+                            "name": "Large",
+                            "ordinal": 3,
+                            "pricingType": "FIXED_PRICING",
+                            "priceMoney":
+                            {
+                                "amount": "550",
+                                "currency": "USD"
+                            },
+                            "stockable": true
+                        }
+                    }
+                ],
+                "productType": "REGULAR",
+                "skipModifierScreen": false
+            }
+        },
+        {
+            "type": "ITEM",
+            "id": "2CFZBO3OXJNABMXNXAT6JFZA",
+            "updatedAt": "2021-11-01T08:31:53.602Z",
+            "version": "1635755513602",
+            "isDeleted": false,
+            "presentAtAllLocations": false,
+            "presentAtLocationIds":
+            [
+                "LDMCJ6Q2MR017"
+            ],
+            "imageId": "OS4HMG5EWBQP6XY6QED3JAR3",
+            "itemData":
+            {
+                "name": "Mac 'n Cheese",
+                "description": "Triple layered melted cheese blended in creamy cheddar sauce with elbow macaroni. Classic comfort food.",
+                "categoryId": "YK244TQICGY4GKVLOOVWND7Z",
+                "variations":
+                [
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "UEGAWCU5HI5BWUR75IQNZLAN",
+                        "updatedAt": "2021-10-31T15:18:58.415Z",
+                        "version": "1635693538415",
+                        "isDeleted": false,
+                        "presentAtAllLocations": false,
+                        "presentAtLocationIds":
+                        [
+                            "LDMCJ6Q2MR017"
+                        ],
+                        "itemVariationData":
+                        {
+                            "itemId": "2CFZBO3OXJNABMXNXAT6JFZA",
+                            "name": "Regular",
+                            "ordinal": 1,
+                            "pricingType": "FIXED_PRICING",
+                            "priceMoney":
+                            {
+                                "amount": "1200",
+                                "currency": "USD"
+                            },
+                            "stockable": true
+                        }
+                    }
+                ],
+                "productType": "REGULAR",
+                "skipModifierScreen": false
+            }
+        },
+        {
+            "type": "ITEM",
+            "id": "J3VYUXNRLFRB3LQ7CHUZG2OT",
+            "updatedAt": "2021-11-02T12:55:00.58Z",
+            "version": "1635857700580",
+            "isDeleted": false,
+            "presentAtAllLocations": true,
+            "imageId": "N5DK356GC5Q72TKVBRM2S4I2",
+            "itemData":
+            {
+                "name": "Italian Sub",
+                "description": "Foot-long Italian sub with salami, cheddar cheese, provolone cheese, lettuce, tomatoes and mayo on 9-grain wheat bread. Toasted.",
+                "categoryId": "E474ZEDE5BFWCX64JQAMM7QC",
+                "variations":
+                [
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "JABBJHMD6PA3HBESGJQAKTNA",
+                        "updatedAt": "2021-11-02T12:55:00.58Z",
+                        "version": "1635857700580",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "J3VYUXNRLFRB3LQ7CHUZG2OT",
+                            "name": "Regular",
+                            "ordinal": 1,
+                            "pricingType": "FIXED_PRICING",
+                            "priceMoney":
+                            {
+                                "amount": "1225",
+                                "currency": "USD"
+                            },
+                            "stockable": true
+                        }
+                    }
+                ],
+                "productType": "REGULAR",
+                "skipModifierScreen": false
+            }
+        },
+        {
+            "type": "ITEM",
+            "id": "K3RX6EZYI4QMA4XAKNIKYKJC",
+            "updatedAt": "2021-11-02T14:00:06.156Z",
+            "version": "1635861606156",
+            "isDeleted": false,
+            "presentAtAllLocations": true,
+            "imageId": "6UZOFHG2P2FTJYBAG6ZZ5YWJ",
+            "itemData":
+            {
+                "name": "Turkey Avocado Sandwich",
+                "description": "Turkey + avocado slices with lettuce and mayo on whole wheat bread.",
+                "categoryId": "E474ZEDE5BFWCX64JQAMM7QC",
+                "variations":
+                [
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "JDIQZTH3RC3WRCVINIIYCVQD",
+                        "updatedAt": "2021-11-02T14:00:06.156Z",
+                        "version": "1635861606156",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "K3RX6EZYI4QMA4XAKNIKYKJC",
+                            "name": "Regular",
+                            "ordinal": 1,
+                            "pricingType": "FIXED_PRICING",
+                            "priceMoney":
+                            {
+                                "amount": "850",
+                                "currency": "USD"
+                            },
+                            "stockable": true
+                        }
+                    }
+                ],
+                "productType": "REGULAR",
+                "skipModifierScreen": false
+            }
+        },
+        {
+            "type": "ITEM",
+            "id": "DGVXBBFXRRIZ5PC6K7ZO7JYK",
+            "updatedAt": "2021-11-05T19:30:40.545Z",
+            "version": "1636140640545",
+            "isDeleted": false,
+            "presentAtAllLocations": true,
+            "imageId": "YVPLQWJT7N4P7YVMEY6XUCMP",
+            "itemData":
+            {
+                "name": "Cheese Burger",
+                "categoryId": "YK244TQICGY4GKVLOOVWND7Z",
+                "variations":
+                [
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "3M3CDQKQ3VN6CTGDY4WI25FD",
+                        "updatedAt": "2021-11-05T19:30:40.545Z",
+                        "version": "1636140640545",
+                        "isDeleted": false,
+                        "customAttributeValues":
+                        {
+                            "Square:a864b0fb-0906-4dd5-baf2-2404e0757399":
+                            {
+                                "name": "Dietary",
+                                "customAttributeDefinitionId": "UDIZE7MEFXX6GZLYZMDZKZG7",
+                                "type": "SELECTION",
+                                "selectionUidValues":
+                                [
+                                    "XV7FGW3SZ63PFTY6NOYZQZWW"
+                                ],
+                                "key": "Square:a864b0fb-0906-4dd5-baf2-2404e0757399"
+                            }
+                        },
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "DGVXBBFXRRIZ5PC6K7ZO7JYK",
+                            "name": "Regular",
+                            "ordinal": 1,
+                            "pricingType": "FIXED_PRICING",
+                            "priceMoney":
+                            {
+                                "amount": "1035",
+                                "currency": "USD"
+                            },
+                            "stockable": true
+                        }
+                    }
+                ],
+                "productType": "REGULAR",
+                "skipModifierScreen": false
+            }
+        },
+        {
+            "type": "ITEM",
+            "id": "5EYK3LUTXI37UHS3MR25O5TE",
+            "updatedAt": "2021-11-02T14:14:32.683Z",
+            "version": "1635862472683",
+            "isDeleted": false,
+            "customAttributeValues":
+            {
+                "Square:f1205748-6ba9-43ed-bd8d-f3abaa79d49e":
+                {
+                    "name": "Hot or Cold",
+                    "customAttributeDefinitionId": "7UGY2YC35T3YF3IZYECXYSM4",
+                    "type": "SELECTION",
+                    "selectionUidValues":
+                    [
+                        "6V6NHCHFMBQBSMSCY5EDRN5M"
+                    ],
+                    "key": "Square:f1205748-6ba9-43ed-bd8d-f3abaa79d49e"
+                }
+            },
+            "presentAtAllLocations": true,
+            "imageId": "3MX5GVB7RBTXIA2GXHWMGML2",
+            "itemData":
+            {
+                "name": "Bubble Tea",
+                "labelColor": "13b1bf",
+                "categoryId": "UC6L3ZTEA7PWITPE3NLYVRX6",
+                "variations":
+                [
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "TL2KTFF3O736GZCNRACXPBF6",
+                        "updatedAt": "2021-11-02T14:13:26.703Z",
+                        "version": "1635862406703",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "5EYK3LUTXI37UHS3MR25O5TE",
+                            "name": "Medium, Black Milk Tea",
+                            "ordinal": 0,
+                            "pricingType": "FIXED_PRICING",
+                            "priceMoney":
+                            {
+                                "amount": "550",
+                                "currency": "USD"
+                            },
+                            "itemOptionValues":
+                            [
+                                {
+                                    "itemOptionId": "KKMMTCDKVNHXA46OPBDJLARP",
+                                    "itemOptionValueId": "TGM7WOSDCOAQGX2WPIQO66GC"
+                                },
+                                {
+                                    "itemOptionId": "DU5BGTD2Y7ER4WP4LHRN4ZGP",
+                                    "itemOptionValueId": "ZY57GPQC5W5SYBCKA32R446Z"
+                                }
+                            ],
+                            "stockable": true
+                        }
+                    },
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "GUJ4U232XIEDR2RYZJKXM3L4",
+                        "updatedAt": "2021-11-02T14:13:26.703Z",
+                        "version": "1635862406703",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "5EYK3LUTXI37UHS3MR25O5TE",
+                            "name": "Medium, Oolong",
+                            "ordinal": 1,
+                            "pricingType": "FIXED_PRICING",
+                            "priceMoney":
+                            {
+                                "amount": "550",
+                                "currency": "USD"
+                            },
+                            "itemOptionValues":
+                            [
+                                {
+                                    "itemOptionId": "KKMMTCDKVNHXA46OPBDJLARP",
+                                    "itemOptionValueId": "TGM7WOSDCOAQGX2WPIQO66GC"
+                                },
+                                {
+                                    "itemOptionId": "DU5BGTD2Y7ER4WP4LHRN4ZGP",
+                                    "itemOptionValueId": "6QBQUIEDTWUSZTQW4KSPUAA7"
+                                }
+                            ],
+                            "stockable": true
+                        }
+                    },
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "DUZNAFNBMTZET2CYQ6GLVAZD",
+                        "updatedAt": "2021-11-02T14:13:26.703Z",
+                        "version": "1635862406703",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "5EYK3LUTXI37UHS3MR25O5TE",
+                            "name": "Medium, Taro",
+                            "ordinal": 2,
+                            "pricingType": "FIXED_PRICING",
+                            "priceMoney":
+                            {
+                                "amount": "550",
+                                "currency": "USD"
+                            },
+                            "itemOptionValues":
+                            [
+                                {
+                                    "itemOptionId": "KKMMTCDKVNHXA46OPBDJLARP",
+                                    "itemOptionValueId": "TGM7WOSDCOAQGX2WPIQO66GC"
+                                },
+                                {
+                                    "itemOptionId": "DU5BGTD2Y7ER4WP4LHRN4ZGP",
+                                    "itemOptionValueId": "2U4JC7LY5LGX35FGDRGL2QPQ"
+                                }
+                            ],
+                            "stockable": true
+                        }
+                    },
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "QHIGOKXDDR6POLO5JYULZURK",
+                        "updatedAt": "2021-11-02T14:13:26.703Z",
+                        "version": "1635862406703",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "5EYK3LUTXI37UHS3MR25O5TE",
+                            "name": "Large, Black Milk Tea",
+                            "ordinal": 3,
+                            "pricingType": "FIXED_PRICING",
+                            "priceMoney":
+                            {
+                                "amount": "600",
+                                "currency": "USD"
+                            },
+                            "itemOptionValues":
+                            [
+                                {
+                                    "itemOptionId": "KKMMTCDKVNHXA46OPBDJLARP",
+                                    "itemOptionValueId": "MCGCFHSVIA7JETDBXHD7W4IR"
+                                },
+                                {
+                                    "itemOptionId": "DU5BGTD2Y7ER4WP4LHRN4ZGP",
+                                    "itemOptionValueId": "ZY57GPQC5W5SYBCKA32R446Z"
+                                }
+                            ],
+                            "stockable": true
+                        }
+                    },
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "E2XANAOORUJ5JQ23WQVS2ELG",
+                        "updatedAt": "2021-11-02T14:13:26.703Z",
+                        "version": "1635862406703",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "5EYK3LUTXI37UHS3MR25O5TE",
+                            "name": "Large, Oolong",
+                            "ordinal": 4,
+                            "pricingType": "FIXED_PRICING",
+                            "priceMoney":
+                            {
+                                "amount": "600",
+                                "currency": "USD"
+                            },
+                            "itemOptionValues":
+                            [
+                                {
+                                    "itemOptionId": "KKMMTCDKVNHXA46OPBDJLARP",
+                                    "itemOptionValueId": "MCGCFHSVIA7JETDBXHD7W4IR"
+                                },
+                                {
+                                    "itemOptionId": "DU5BGTD2Y7ER4WP4LHRN4ZGP",
+                                    "itemOptionValueId": "6QBQUIEDTWUSZTQW4KSPUAA7"
+                                }
+                            ],
+                            "stockable": true
+                        }
+                    },
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "4SXNFGV6EUVWMMNA7BBB6HR4",
+                        "updatedAt": "2021-11-02T14:13:26.703Z",
+                        "version": "1635862406703",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "5EYK3LUTXI37UHS3MR25O5TE",
+                            "name": "Large, Taro",
+                            "ordinal": 5,
+                            "pricingType": "FIXED_PRICING",
+                            "priceMoney":
+                            {
+                                "amount": "600",
+                                "currency": "USD"
+                            },
+                            "itemOptionValues":
+                            [
+                                {
+                                    "itemOptionId": "KKMMTCDKVNHXA46OPBDJLARP",
+                                    "itemOptionValueId": "MCGCFHSVIA7JETDBXHD7W4IR"
+                                },
+                                {
+                                    "itemOptionId": "DU5BGTD2Y7ER4WP4LHRN4ZGP",
+                                    "itemOptionValueId": "2U4JC7LY5LGX35FGDRGL2QPQ"
+                                }
+                            ],
+                            "stockable": true
+                        }
+                    }
+                ],
+                "productType": "REGULAR",
+                "skipModifierScreen": false,
+                "itemOptions":
+                [
+                    {
+                        "itemOptionId": "KKMMTCDKVNHXA46OPBDJLARP"
+                    },
+                    {
+                        "itemOptionId": "DU5BGTD2Y7ER4WP4LHRN4ZGP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "ITEM",
+            "id": "H56ZXA3IJXR7BZE4DNKVPGRW",
+            "updatedAt": "2021-11-02T14:15:19.377Z",
+            "version": "1635862519377",
+            "isDeleted": false,
+            "presentAtAllLocations": true,
+            "imageId": "NWDEGU6UTHIE7ZMFIZWPVLTX",
+            "itemData":
+            {
+                "name": "Combo #1 - Burger with Fries",
+                "categoryId": "YPUPLBUZ5I7VBMC22XHRDIZ2",
+                "variations":
+                [
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "WUIHBVH6U4KEIIIKLS3HKEJA",
+                        "updatedAt": "2021-11-02T14:14:20.291Z",
+                        "version": "1635862460291",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "H56ZXA3IJXR7BZE4DNKVPGRW",
+                            "name": "Regular",
+                            "ordinal": 1,
+                            "pricingType": "FIXED_PRICING",
+                            "priceMoney":
+                            {
+                                "amount": "1500",
+                                "currency": "USD"
+                            },
+                            "stockable": true
+                        }
+                    }
+                ],
+                "productType": "REGULAR",
+                "skipModifierScreen": false
+            }
+        },
+        {
+            "type": "ITEM",
+            "id": "QF2LEDK34VBZJEO2UAZIFAN5",
+            "updatedAt": "2021-11-05T19:35:04.657Z",
+            "version": "1636140904657",
+            "isDeleted": false,
+            "presentAtAllLocations": true,
+            "imageId": "6UATDRYFTVTT4P2GKKWBVG6E",
+            "itemData":
+            {
+                "name": "Garlic Bread",
+                "categoryId": "EQKRRZS3TQYZAF5Y7VS2KYN6",
+                "variations":
+                [
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "PKJZ4VDJGIM552WJWHJNE2G4",
+                        "updatedAt": "2021-11-05T19:35:04.657Z",
+                        "version": "1636140904657",
+                        "isDeleted": false,
+                        "customAttributeValues":
+                        {
+                            "Square:a864b0fb-0906-4dd5-baf2-2404e0757399":
+                            {
+                                "name": "Dietary",
+                                "customAttributeDefinitionId": "UDIZE7MEFXX6GZLYZMDZKZG7",
+                                "type": "SELECTION",
+                                "selectionUidValues":
+                                [
+                                    "XV7FGW3SZ63PFTY6NOYZQZWW",
+                                    "5Z7RID64YKPKFRSUI7VRKW6P"
+                                ],
+                                "key": "Square:a864b0fb-0906-4dd5-baf2-2404e0757399"
+                            }
+                        },
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "QF2LEDK34VBZJEO2UAZIFAN5",
+                            "name": "Regular",
+                            "ordinal": 1,
+                            "pricingType": "FIXED_PRICING",
+                            "priceMoney":
+                            {
+                                "amount": "375",
+                                "currency": "USD"
+                            },
+                            "stockable": true
+                        }
+                    }
+                ],
+                "productType": "REGULAR",
+                "skipModifierScreen": false
+            }
+        },
+        {
+            "type": "ITEM",
+            "id": "6UG2DXGOVICYOPW7G6BJ6FLG",
+            "updatedAt": "2021-11-02T14:25:02.065Z",
+            "version": "1635863102065",
+            "isDeleted": false,
+            "presentAtAllLocations": true,
+            "imageId": "FNSITBRQWWMZ6TAI63Z2QYMM",
+            "itemData":
+            {
+                "name": "Breakfast/Brunch Combo",
+                "categoryId": "YPUPLBUZ5I7VBMC22XHRDIZ2",
+                "variations":
+                [
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "YQNHS77AKXEEB4LNUSZGHE2L",
+                        "updatedAt": "2021-11-02T14:18:30.206Z",
+                        "version": "1635862710206",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "6UG2DXGOVICYOPW7G6BJ6FLG",
+                            "name": "Regular",
+                            "ordinal": 1,
+                            "pricingType": "FIXED_PRICING",
+                            "priceMoney":
+                            {
+                                "amount": "1020",
+                                "currency": "USD"
+                            },
+                            "stockable": true
+                        }
+                    }
+                ],
+                "productType": "REGULAR",
+                "skipModifierScreen": false
+            }
+        },
+        {
+            "type": "ITEM",
+            "id": "ZQ6DWIUNRXJUIHYGC3LGE5HA",
+            "updatedAt": "2021-11-05T19:30:56.969Z",
+            "version": "1636140656969",
+            "isDeleted": false,
+            "presentAtAllLocations": true,
+            "imageId": "BNBYT4G7UDNR7ASY3IUFCE63",
+            "itemData":
+            {
+                "name": "Chicken & Mozzarella Sticks",
+                "categoryId": "YPUPLBUZ5I7VBMC22XHRDIZ2",
+                "variations":
+                [
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "YXJB63CXYQSXCOST2BU22M2J",
+                        "updatedAt": "2021-11-05T19:30:56.969Z",
+                        "version": "1636140656969",
+                        "isDeleted": false,
+                        "customAttributeValues":
+                        {
+                            "Square:a864b0fb-0906-4dd5-baf2-2404e0757399":
+                            {
+                                "name": "Dietary",
+                                "customAttributeDefinitionId": "UDIZE7MEFXX6GZLYZMDZKZG7",
+                                "type": "SELECTION",
+                                "selectionUidValues":
+                                [
+                                    "XV7FGW3SZ63PFTY6NOYZQZWW"
+                                ],
+                                "key": "Square:a864b0fb-0906-4dd5-baf2-2404e0757399"
+                            }
+                        },
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "ZQ6DWIUNRXJUIHYGC3LGE5HA",
+                            "name": "Regular",
+                            "ordinal": 1,
+                            "pricingType": "FIXED_PRICING",
+                            "priceMoney":
+                            {
+                                "amount": "1300",
+                                "currency": "USD"
+                            },
+                            "stockable": true
+                        }
+                    }
+                ],
+                "productType": "REGULAR",
+                "skipModifierScreen": false
+            }
+        },
+        {
+            "type": "ITEM",
+            "id": "2V3OEERA6BJNAX5KWT4PMBOK",
+            "updatedAt": "2021-11-05T19:44:01.718Z",
+            "version": "1636141441718",
+            "isDeleted": false,
+            "customAttributeValues":
+            {
+                "Square:b37bbe8b-943e-4a11-9217-f99ea9e5426b":
+                {
+                    "name": "Spicy",
+                    "customAttributeDefinitionId": "BZSZ3D7RF5S34IH5HOJDVMQC",
+                    "type": "BOOLEAN",
+                    "booleanValue": true,
+                    "key": "Square:b37bbe8b-943e-4a11-9217-f99ea9e5426b"
+                }
+            },
+            "presentAtAllLocations": true,
+            "imageId": "DRDRZXJBSSHRFSA3OG5SQVP3",
+            "itemData":
+            {
+                "name": "Spicy Kimchi Ramyeon",
+                "description": "Instant Korean ramen noodles in spicy, vegan broth.",
+                "categoryId": "YK244TQICGY4GKVLOOVWND7Z",
+                "variations":
+                [
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "RCFBEUPWYMFKDIVUDJG7CORE",
+                        "updatedAt": "2021-11-05T19:44:01.718Z",
+                        "version": "1636141441718",
+                        "isDeleted": false,
+                        "customAttributeValues":
+                        {
+                            "Square:a864b0fb-0906-4dd5-baf2-2404e0757399":
+                            {
+                                "name": "Dietary",
+                                "customAttributeDefinitionId": "UDIZE7MEFXX6GZLYZMDZKZG7",
+                                "type": "SELECTION",
+                                "selectionUidValues":
+                                [
+                                    "5Z7RID64YKPKFRSUI7VRKW6P",
+                                    "XV7FGW3SZ63PFTY6NOYZQZWW",
+                                    "R4MSHSOMS4U3TICPTPX7PCC2"
+                                ],
+                                "key": "Square:a864b0fb-0906-4dd5-baf2-2404e0757399"
+                            }
+                        },
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "2V3OEERA6BJNAX5KWT4PMBOK",
+                            "name": "Regular",
+                            "ordinal": 1,
+                            "pricingType": "FIXED_PRICING",
+                            "priceMoney":
+                            {
+                                "amount": "350",
+                                "currency": "USD"
+                            },
+                            "stockable": true
+                        }
+                    }
+                ],
+                "productType": "REGULAR",
+                "skipModifierScreen": false
+            }
+        },
+        {
+            "type": "ITEM",
+            "id": "HYBMJWEJQO5NBAPFP5TZ6PZN",
+            "updatedAt": "2021-11-05T19:29:46.656Z",
+            "version": "1636140586656",
+            "isDeleted": false,
+            "customAttributeValues":
+            {
+                "Square:a864b0fb-0906-4dd5-baf2-2404e0757399":
+                {
+                    "name": "Dietary",
+                    "customAttributeDefinitionId": "UDIZE7MEFXX6GZLYZMDZKZG7",
+                    "type": "SELECTION",
+                    "selectionUidValues":
+                    [
+                        "IBPK72XLJ5QQNXOGJLHIVW7J",
+                        "XV7FGW3SZ63PFTY6NOYZQZWW"
+                    ],
+                    "key": "Square:a864b0fb-0906-4dd5-baf2-2404e0757399"
+                }
+            },
+            "presentAtAllLocations": true,
+            "imageId": "KOZE2H27ECFOJOTN5SDU3MYR",
+            "itemData":
+            {
+                "name": "Italian Meatballs",
+                "variations":
+                [
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "DCI3JNYV77JFPJVTSD3QGY72",
+                        "updatedAt": "2021-11-05T18:10:59.772Z",
+                        "version": "1636135859772",
+                        "isDeleted": false,
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "HYBMJWEJQO5NBAPFP5TZ6PZN",
+                            "name": "Regular",
+                            "ordinal": 1,
+                            "pricingType": "VARIABLE_PRICING",
+                            "stockable": true
+                        }
+                    }
+                ],
+                "productType": "REGULAR",
+                "skipModifierScreen": false
+            }
+        },
+        {
+            "type": "ITEM",
+            "id": "OM7UE5ILIRHQVQVNGRUUH4TS",
+            "updatedAt": "2021-11-05T19:59:24.839Z",
+            "version": "1636142364839",
+            "isDeleted": false,
+            "presentAtAllLocations": true,
+            "imageId": "RP5NMK2QVTX6LOTVPTV2VDYK",
+            "itemData":
+            {
+                "name": "Berry Smoothie",
+                "description": "Blueberries, strawberries, raspberries blended with pure soy milk. Fresh whole fruits. No sugar added. ",
+                "variations":
+                [
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "BZO2MJB3AC5TZPNXIG5QJED6",
+                        "updatedAt": "2021-11-05T19:59:24.839Z",
+                        "version": "1636142364839",
+                        "isDeleted": false,
+                        "customAttributeValues":
+                        {
+                            "Square:a864b0fb-0906-4dd5-baf2-2404e0757399":
+                            {
+                                "name": "Dietary",
+                                "customAttributeDefinitionId": "UDIZE7MEFXX6GZLYZMDZKZG7",
+                                "type": "SELECTION",
+                                "selectionUidValues":
+                                [
+                                    "R4MSHSOMS4U3TICPTPX7PCC2",
+                                    "5Z7RID64YKPKFRSUI7VRKW6P",
+                                    "X5VX6EOBR4SXHXW7CLKMQBFE",
+                                    "ASH4FGB7TQNSDMDQBWX2KG2F",
+                                    "XV7FGW3SZ63PFTY6NOYZQZWW"
+                                ],
+                                "key": "Square:a864b0fb-0906-4dd5-baf2-2404e0757399"
+                            }
+                        },
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "OM7UE5ILIRHQVQVNGRUUH4TS",
+                            "name": "Regular",
+                            "ordinal": 1,
+                            "pricingType": "FIXED_PRICING",
+                            "priceMoney":
+                            {
+                                "amount": "550",
+                                "currency": "USD"
+                            },
+                            "stockable": true
+                        }
+                    }
+                ],
+                "productType": "REGULAR",
+                "skipModifierScreen": false
+            }
+        },
+        {
+            "type": "ITEM",
+            "id": "ZWAUVESGF2LQBZUQAYZJVEEG",
+            "updatedAt": "2021-11-05T19:18:08.863Z",
+            "version": "1636139888863",
+            "isDeleted": false,
+            "presentAtAllLocations": true,
+            "imageId": "LDTDOLBPYBTHEDK667Z744OA",
+            "itemData":
+            {
+                "name": "Cinnamon Pecan Waffles",
+                "description": "Cinnamon flavored pecan nut waffles. Vegan and gluten free.",
+                "variations":
+                [
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "S7QISRQTMA6J5O3VK6YGR5W6",
+                        "updatedAt": "2021-11-05T19:18:08.863Z",
+                        "version": "1636139888863",
+                        "isDeleted": false,
+                        "customAttributeValues":
+                        {
+                            "Square:a864b0fb-0906-4dd5-baf2-2404e0757399":
+                            {
+                                "name": "Dietary",
+                                "customAttributeDefinitionId": "UDIZE7MEFXX6GZLYZMDZKZG7",
+                                "type": "SELECTION",
+                                "selectionUidValues":
+                                [
+                                    "ASH4FGB7TQNSDMDQBWX2KG2F",
+                                    "R4MSHSOMS4U3TICPTPX7PCC2"
+                                ],
+                                "key": "Square:a864b0fb-0906-4dd5-baf2-2404e0757399"
+                            }
+                        },
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "ZWAUVESGF2LQBZUQAYZJVEEG",
+                            "name": "Regular",
+                            "ordinal": 1,
+                            "pricingType": "FIXED_PRICING",
+                            "priceMoney":
+                            {
+                                "amount": "725",
+                                "currency": "USD"
+                            },
+                            "stockable": true
+                        }
+                    }
+                ],
+                "productType": "REGULAR",
+                "skipModifierScreen": false
+            }
+        },
+        {
+            "type": "ITEM",
+            "id": "KQGGPZWSQRWUSXQ2KAKXKYPX",
+            "updatedAt": "2021-11-05T19:23:19.361Z",
+            "version": "1636140199361",
+            "isDeleted": false,
+            "presentAtAllLocations": true,
+            "imageId": "F6CHULSYPQKAVW6OJJ35T4FW",
+            "itemData":
+            {
+                "name": "Lemon Grilled Fish & Tomatoes",
+                "description": "Grilled fish topped with cherry tomatoes and lemon slices. Keto dish.",
+                "variations":
+                [
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "QPSNL2DV2QJQI27UVD2FRHSD",
+                        "updatedAt": "2021-11-05T19:23:19.361Z",
+                        "version": "1636140199361",
+                        "isDeleted": false,
+                        "customAttributeValues":
+                        {
+                            "Square:a864b0fb-0906-4dd5-baf2-2404e0757399":
+                            {
+                                "name": "Dietary",
+                                "customAttributeDefinitionId": "UDIZE7MEFXX6GZLYZMDZKZG7",
+                                "type": "SELECTION",
+                                "selectionUidValues":
+                                [
+                                    "IBPK72XLJ5QQNXOGJLHIVW7J"
+                                ],
+                                "key": "Square:a864b0fb-0906-4dd5-baf2-2404e0757399"
+                            }
+                        },
+                        "presentAtAllLocations": true,
+                        "itemVariationData":
+                        {
+                            "itemId": "KQGGPZWSQRWUSXQ2KAKXKYPX",
+                            "name": "Regular",
+                            "ordinal": 1,
+                            "pricingType": "VARIABLE_PRICING",
+                            "stockable": true
+                        }
+                    }
+                ],
+                "productType": "REGULAR",
+                "skipModifierScreen": false
+            }
+        }
+    ]
+}
