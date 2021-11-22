@@ -1,0 +1,100 @@
+	In-person Self Service
+		1. Buyer scans QR code -> opens URL in browser
+		2a. New user? Create account · Guest? Instant account
+		2b. Prompts buyer to enter email / phone # & password (login)
+		3. Choose from saved orders, reorder last transaction, or start new order
+		4. Review and confirm (show loyalty points & available discounts)
+		5. Process payment & generate invoice receipt (email invoice)
+			- Order details, est. wait time (queue), order #
+		6. Alert when order is ready 
+			- "How would you like to be notified when your order is ready?"
+				- browser pop up, SMS, sound alarm, screen light up, vibrate mobile device, confetti
+			- avoid the trouble of missing order call (noisy environment, going to restroom)
+			- no need to remember or keep checking long order #
+			- server saves time (check off order # instead of repeatedly calling out order #)
+
+		7. Earn points: 
+			submit customer feedback, Yelp review, check in
+			like, follow, share on socials
+
+		8. If feedback == negative, add feedback to list for manual managerial review, add selected customers to 'unsatisfactory experience' group -> send apology email + invite back to store with discount redeemable on next visit (follow up)
+
+
+	Call in Order (Pickup or Delivery)
+		- seller enters email/phone # · verify buyer's name
+
+	Accomodate large orders (Group, Table, Dine in, Catering, Restaurants)
+		Seller Dashboard:
+			- option to rearrange items after order placement (drag & drop)
+			- quickly sort by item type (e.g. drinks, dessert, entrees), quantity
+
+		Customer & Seller Dashboards:
+			- split into individual sub-orders (create & add items to separate containers)
+				- assign, package & mark under different names
+				- diet restrictions (allergies, vegan, diabetic, lactose intolerant, high blood pressure)
+				- switch between collapsed & expanded views (seller)
+				- generate & print labels (seller)
+
+	catalog categories 
+		- only highlight/display suitable selection of food options for buyer (saved preferences)
+		- filter: low sodium, not spicy, gluten free, vegan, sugar free, low GI, no nuts, dairy free, keto, kids meal
+		- 'healthy' is vague
+
+	Customers
+	  - note: diet preference, previous order ID
+
+		discounts - expiration date
+
+		Rewards 
+			- XY points -> redeem gift card
+			- birthday reward (or creation date if birthday == null)
+
+	Regular Customers = Same Order
+		Get the buyer's latest (or last two orders) -> set to current order
+		Review items before checkout (option to edit)
+		Apply discounts/promotions if loyalty account balance >== redeemable points for reward
+		Show any other discounts/rewards (and points away from rewards) not applicable to current order (e.g. need +2 points to redeem a free drink) - create customer group - send promotional emails
+
+		Auto generate + email invoice
+			- Items ordered, purchase amount 
+			- loyalty balance, rewards 
+				- how many more points needed to redeem (e.g. DD Perks, KFTea Rewards)
+				- customer loyalty dashboard on app
+
+		Auto process card payment 
+			- charge buyer's credit/debit card on file 
+				- prompt buyer's signature for final confirmation (for orders > $$)
+		Calculate & add loyalty points to buyer's account (according to accrual rules)
+
+	Seller Dashboard
+		Allow seller to create bundles	
+
+	Catalog API 
+		*  PRODUCT_SET - create, update, delete bundled products/services
+		  (gift sets, platters, subscription boxes, bulk orders, combo meals)
+		*  PRICING_RULE & discountData - create & apply bundled discount
+	Inventory API 
+		*  update inventory
+
+	Orders API
+		*  SearchOrders - by customer, state, & date_time filters (customer_id)
+		*  AccumulateLoyaltyPoints - compute loyalty points for a given order ID and add the points to the loyalty account of the buyer
+	
+	Loyalty & Catalog APIs
+		*  set points accrual rules for bundled items (catalog_object_id, CatalogPricingRule)
+
+
+	Summary Report Dashboard:
+		- # of bundles sold, total discounts given (filter by date, month, year)
+		- % purchases that are loyalty vs non-loyalty
+		- sort bundles by popularity
+
+	Benefits	
+		- Faster self-service checkout
+		- Replace physical stamp cards
+
+
+	Most Creative Use Case for... 
+		* Gift Cards API (new)
+		* Loyalty API
+		* Invoices API   

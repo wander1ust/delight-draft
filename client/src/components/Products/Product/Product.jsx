@@ -5,14 +5,16 @@ import { AddShoppingCart } from '@material-ui/icons';
 
 import useStyles from './styles';
 
-const Product = ({ product, catalogImages, onAddToCart, handleUpdateCartQty, selectedReward, onClick }) => {
+const Product = ({ products, product, catalogImages, onAddToCart, handleUpdateCartQty, selectedReward, getItemsInCategory, setEligibleItems, eligibleItems, onClick }) => {
   const classes = useStyles();
   const { itemData } = product;
   const { name, description, categoryId, variations } = itemData;
 
   const [rewardItemId, setRewardItemId] = useState('');
+  const [itemId, setItemId] = useState('');
   const [itemVariations, setItemVariations] = useState([]);
   const [variationItemIndex, setVariationItemIndex] = useState(0);
+  // const [eligibleItems, setEligibleItems] = useState([]);
   const [forbiddenVariationChange, setForbiddenVariationChange] = useState(0);
   const [itemRewardIneligible, setItemRewardIneligible] = useState(false);
   
@@ -31,6 +33,27 @@ const Product = ({ product, catalogImages, onAddToCart, handleUpdateCartQty, sel
     }
   })(Typography);  
 
+  // add variation item ID to arr if item matches reward category ID
+  const getRewardItems = async () => {
+    let arr = [];
+    if (await rewardType() === 'CATEGORY' && rewardItemId && categoryId === rewardItemId) {
+      await itemVariations.map(async (variation) => {
+          arr.push(variation.id);  
+          // setEligibleItems(arr.concat(eligibleItems));
+          // const current = await 
+          // setEligibleItems(await eligibleItems.concat(arr));
+          // setEligibleItems(new Array(...arr, ...eligibleItems));
+          // setEligibleItems(eligibleItems.push(variation.id));
+          // arr.push(itemId);  
+      })      
+    } 
+      // const res = await arr.concat(eligibleItems);
+      // setEligibleItems(await arr);
+      // setEligibleItems(new Array(...arr, ...eligibleItems));
+      // console.log('getRewardItems: ' + JSON.stringify(new Array(...arr, ...eligibleItems)))
+    return await arr;
+  }
+
   const doesItemMatchReward = () => {    
     if (selectedReward && product) {
       let catalogItemId = '';
@@ -42,6 +65,9 @@ const Product = ({ product, catalogImages, onAddToCart, handleUpdateCartQty, sel
           break;
         case 'CATEGORY':
           result = categoryId === rewardItemId;
+          // if (categoryId === rewardItemId) {
+          //   result = getItemsInCategory(categoryId);
+          // }
           break;
         default:  
           catalogItemId = variations[0].id;      
@@ -61,6 +87,7 @@ const Product = ({ product, catalogImages, onAddToCart, handleUpdateCartQty, sel
     const variationItem = itemVariations[itemIndex];
 
     onClick(variationItem);
+    setItemId(itemId);
     setVariationItemIndex(itemIndex);
     console.log(`variationItem: ` + JSON.stringify(itemVariations[itemIndex]));    
 
@@ -99,11 +126,13 @@ const Product = ({ product, catalogImages, onAddToCart, handleUpdateCartQty, sel
 
   const showItemVariations = () => { 
     let arr = [];
+    // let eligibleVariations = [];
     itemVariations.map((variation, i) => {
         arr.push(
           <div id={`${variation.id}`} className={`${classes.itemVariation} ${classes.boldText} ${borderStyle(variation, i)}`} onClick={(e) => handleVariationClick(e, variation)} /*ref={itemVariation}*/>{variation.name}</div>
-        )
+        )     
     })
+    // setEligibleItems(eligibleVariations);    
     return arr;
   }     
    
@@ -165,14 +194,50 @@ const Product = ({ product, catalogImages, onAddToCart, handleUpdateCartQty, sel
 
   const isItemVariationReward = rewardType() === 'ITEM_VARIATION';
 
-  // const handleAddToCart = () => onAddToCart(product.id, 1);
+  // get item(s) belonging to specific category
+  // const getItemsInCategory = (id) => {
+  //     let arr = []; 
+  //     let items = [];
+  //     // const items = products.filter(product => {
+  //     //   return product.itemData.categoryId === id
+  //     // });      
+  //     if (categoryId === id) {
+  //       items.push(product);
+  //     }
+  //     items.map(item => { 
+  //       // arr.push(item.itemData.variations);
+  //       item.itemData.variations.map(variation => {
+  //           const data = variation.itemVariationData;
+  //           data.fullName = item.itemData.name;
+  //           data.imageId = item.imageId;
+  //           arr.push(variation);
+  //       })
+  //     });  
+  //     console.log('getItemsInCategory items: ' + JSON.stringify(items) );
+  //     console.log('getItemsInCategory: ' + JSON.stringify(arr) );
+  //     return arr;
+  // }      
+
+  // check if chosen variation is one of selected & claimable rewards' item IDs
+  // if yes, then allow add to cart
+  // if no, then disallow add to cart; throw err
   const handleAddToCart = () => {
     console.log(`variations OK: ${JSON.stringify(variationItemIndex)}`);
     // if (variations.length == 1) {
     //   setVariationItemIndex(0)
     // }    
+    // if item does not belong under redeemable rewards, then disable addToCart
+    // only add to cart if item ID matches one of IDs in redeemable rewards
     if (variationItemIndex) {
-      onAddToCart(itemVariations[variationItemIndex], 1);
+      console.log('itemId: ' + JSON.stringify(getItemsInCategory('UC6L3ZTEA7PWITPE3NLYVRX6')));
+      const item = itemVariations[variationItemIndex];
+      const redeemableItemIds = getItemsInCategory('UC6L3ZTEA7PWITPE3NLYVRX6');
+      if (rewardType() === 'CATEGORY' || rewardType() === 'ITEM_VARIATION') {
+        if (redeemableItemIds.find(id => id === itemId)) {
+          onAddToCart(item, 1);
+        }
+      }
+      // onAddToCart(item, 1);
     //   console.log('no good: ' + JSON.stringify(itemVariations));
     //   console.log('no good variationItemIndex: ' + JSON.stringify(variationItemIndex));
       
@@ -192,19 +257,57 @@ const Product = ({ product, catalogImages, onAddToCart, handleUpdateCartQty, sel
   }
 
   useEffect(() => {
-    setItemVariationsData();
+    setItemVariationsData();    
     console.log('setItemVariationsData: ' + JSON.stringify(itemVariations));
   }, [])  
 
   useEffect(() => {
     if (selectedReward) { 
       setRewardItemId(selectedReward.info.catalogObjectIds[0]);
+      // TODO: bad - fix this
+      // category reward must be clicked twice; arrays not concatenated
+      if (eligibleItems) {        
+        getRewardItems()
+        .then(async (items) => {
+            setEligibleItems(items.concat(await eligibleItems))
+            // setEligibleItems(...items, ...eligibleItems);
+            console.log('eligibleItems after: ' + await eligibleItems);
+        });
+      }
+
+      // if (eligibleItems) {
+      //   getRewardItems(rewardType(), categoryId, rewardItemId).then(items => {setEligibleItems(items.concat(eligibleItems))});
+      // }
     }
-  }, [selectedReward])
+  }, [selectedReward])  
+
+
+
+  // useEffect(() => {
+  //   if (selectedReward) { 
+  //     setRewardItemId(selectedReward.info.catalogObjectIds[0]);
+  //     if (eligibleItems && eligibleItems.length === 0) {        
+  //       getRewardItems().then(async (items) => {
+  //         const merged = await items.concat(await eligibleItems);
+  //         setEligibleItems(merged)
+  //       });
+  //     }
+
+  //     // if (eligibleItems) {
+  //     //   getRewardItems(rewardType(), categoryId, rewardItemId).then(items => {setEligibleItems(items.concat(eligibleItems))});
+  //     // }
+  //   }
+  // }, [selectedReward])  
+
+
+
+  // useEffect(() => {
+  //     console.log('eligibleItems: ' + JSON.stringify(eligibleItems))
+  // }, [eligibleItems])
 
   return (
-    // {async () => {return product}} &&
-    <Card className={`${classes.root} ${doesItemMatchReward() ? classes.highlight : null}`}>
+    // {async () => {return product}} &&    
+    <Card className={`${classes.root} ${doesItemMatchReward() ? classes.highlight : null}`}>    
       <CardMedia className={classes.media} image={catalogImages.length ? getImageUrlById(product.imageId).imageData.url : require('../../../assets/imgs/tomato-cheese-panini.jpg').default} title={name} />
        <div className={doesItemMatchReward() ? classes.rewardLabel : null}>
           </div>
@@ -233,6 +336,7 @@ const Product = ({ product, catalogImages, onAddToCart, handleUpdateCartQty, sel
      {/*   <p className={`${classes.redText}, ${classes.boldText}, ${forbiddenVariationChange ? classes.show + ', ' + classes.redText : (rewardType() == 'ITEM_VARIATION' ? classes.fade : classes.hide)}`}> This item is not eligible for reward <HiOutlineEmojiSad /> </p>*/}
         
       {renderInvalidRewardItemMsg()}
+      {/*{getRewardItems()}*/}
 
         <p className={classes.points + ', ' + classes.boldText}> +10 points</p>           
        {/* <Typography dangerouslySetInnerHTML={{ __html: product.itemData.description }} variant="body2" color="textSecondary" component="p" />*/}

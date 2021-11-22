@@ -6,9 +6,11 @@
 
 # misc
 .DS_Store
-.env
+#.env
 .env.example
 
 private/
 lib/
+.env.old
 
+src/components/ActionsBar/MUI-ActionsBar.jsx

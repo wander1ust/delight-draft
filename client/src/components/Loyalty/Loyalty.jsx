@@ -5,10 +5,14 @@ import { AiOutlineCheckSquare, AiFillCheckSquare, AiFillMinusSquare } from "reac
 import { FaCartPlus } from "react-icons/fa";
 import './styles.css';
 
-const Loyalty = ({ loyalty, onClick, selectedReward, variationItem }) => {
+// TODO: when account loyalty balance increases unlock new rewards as they become available
+
+const Loyalty = ({ loyalty, loyaltyBalance, setLoyaltyBalance, onClick, selectedReward, variationItem, setRedeemableRewards }) => {
 	const { balance } = loyalty
 	const [messageVisible, setMessageVisible] = useState(false);
 	const [rewardActive, setRewardActive] = useState(null);
+	// const [loyaltyBalance, setLoyaltyBalance] = useState([]);
+	// const [redeemableRewards, setRedeemableRewards] = useState([]);
 
 	const handleRewardClick = (e, rewardInfo) => {
 		// activateReward();
@@ -27,19 +31,20 @@ const Loyalty = ({ loyalty, onClick, selectedReward, variationItem }) => {
 	// name, discountType, amount, points
 	const renderRewards = () => {
 		let arr = [];
-		if (loyalty && loyalty.rewards) {
+			
 			loyalty.rewards.map((reward, i) => {
 				const { definition } = reward;
 				const { scope, catalogObjectIds, discountType, percentageDiscount } = definition;
 				const rewardInfo = {scope: scope, catalogObjectIds: catalogObjectIds, discountType: discountType, percentageDiscount};
+				
 				arr.push(
-					<div ref={rewardCoupon} className={`reward ${isRewardRedeemable(reward) ? 'reward-unlocked' : 'reward-locked'} ${rewardActive && selectedReward && selectedReward.id.slice(-1) == i ? 'reward-active' : ''}`}> 
+					<div key={`reward-${i}`} ref={rewardCoupon} className={`reward ${isRewardRedeemable(reward) ? 'reward-unlocked' : 'reward-locked'} ${rewardActive && selectedReward && selectedReward.id.slice(-1) == i ? 'reward-active' : ''}`}> 
 						{renderButton(reward, rewardInfo, i)}
 						{reward.name} &nbsp; {reward.points} pts. 
 					</div>
 				);
 			})		
-		}
+		// }
 		return arr;
 	}
 
@@ -50,7 +55,7 @@ const Loyalty = ({ loyalty, onClick, selectedReward, variationItem }) => {
 	const renderButton = (reward, rewardInfo, i) => {
 		if (isRewardRedeemable(reward)) {	
 	        return <>
-		        <button id={`reward-${i}`} ref={rewardCoupon} className={`label-redeem text-bold`} onClick={(e) => handleRewardClick(e, rewardInfo)}>CLAIM REWARD</button>	
+		        <button id={`rewardBtn-${i}`} ref={rewardCoupon} className={`label-redeem text-bold`} onClick={(e) => handleRewardClick(e, rewardInfo)}>CLAIM REWARD</button>	
 		         
 		        <AiOutlineCheckSquare id='outline-check-circle' className='icon-circle' />	
 	        </>			
@@ -77,16 +82,28 @@ const Loyalty = ({ loyalty, onClick, selectedReward, variationItem }) => {
 	    rewardCoupon.current.classList.add('reward-active');
 	}	
 
-	// useEffect(() => {
-	// 	// if (variationItemPrice) { 
-	// 	// }
-	// }, [variationItemPrice])	
+	useEffect(() => {
+		if (loyalty && loyalty.rewards) {
+			// if (isRewardRedeemable(reward)) {
+				const redeemable = loyalty.rewards.filter(reward => isRewardRedeemable(reward));
+				// isRewardRedeemable(reward);
+				// redeemableRewards.push(redeemable);
+				setRedeemableRewards(redeemable);
+				// redeemable.push(reward);									
+		} 		
+	}, [loyalty])
+
+	useEffect(() => {
+		if (variationItem) { 
+			setLoyaltyBalance(Number(loyalty.balance) + Number(variationItem.price));
+		}
+	}, [variationItem])	
 
 	return (		
 		<div className='text-center'>		 		
 			<div id='title' className='text-bold'> L{/*<span id='flower-emoji'>🌺</span>*/}oyalty Rewards </div>
-			<p>My Account Balance: {Number(loyalty.balance) + Number(variationItem.price)} points</p>
-			{loyalty && renderRewards()} 
+			<p>My Account Balance: {loyaltyBalance ? loyaltyBalance : loyalty.balance} points</p>
+			{loyalty && loyalty.rewards && renderRewards()} 
 			{renderMessage()}
 		</div>
 

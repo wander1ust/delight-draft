@@ -74,4 +74,11 @@ export default makeStyles((theme) => ({
       width: '20ch',
     },
   },
+  loggedInUser: {
+    // paddingBottom: '2em',
+    // display: 'block',
+    marginTop: '0.3em',
+    marginRight: '2em',
+    textAlign: 'center'
+  },
 }));

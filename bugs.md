@@ -4,11 +4,32 @@
 
 ### ❌ NOT WORKING - IDK WHY 🤷🏻‍♀️
 
-👇 why don't these work??
+### 🕰 WORK IN PROGRESS
+- handleSubmit() - Referral component (Referral.jsx)
+- addToCart + variations change not working properly
+- ineligible reward items can be added to cart
+- loyalty account balance needs to update with total item points added to cart
+- fetch customer account data, replace hardcoded values 
+- add customer login & authentication
+- fix console log bugs
+- ... other features that I can't think of rn
 
+👇 why don't these work??
 ```
 const { products } = require('../controllers');
 const { products } = require(path.join(__dirname, '../controllers'));
+```
+***
+
+👇 Works
+```
+const redeemable = loyalty.rewards.filter(reward => loyalty.balance >= reward.points);
+```
+
+👇 Doesn't work... ??
+```
+const isRewardRedeemable = (reward) => loyalty.balance >= reward.points;
+const redeemable = loyalty.rewards.filter(reward => isRewardRedeemable(reward.points));
 ```
 
 **`proxy in server/package.json`** is ignored - why? (no webpack)

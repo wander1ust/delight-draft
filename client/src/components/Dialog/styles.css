@@ -1,0 +1,22 @@
+#btn {
+	display: inline-block;
+	bottom: 0.5em;
+	right: 3em;
+	padding: 0.2em 0.5em;
+	position: fixed;
+	font-weight: 900;
+	background-color: #E6D0DC;
+	border: 1px solid #cf3030;
+	height: 2.3em;
+	font-size: 0.85em;
+	letter-spacing: 0.08em;
+	color: blueviolet;
+	border-radius: 0.2em;
+}
+.em {
+	border-bottom: 2px solid lightgreen;
+	font-weight: 900;
+}
+.spacing {
+	padding: 1em;
+}

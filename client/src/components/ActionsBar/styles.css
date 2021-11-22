@@ -1,0 +1,29 @@
+.actionsBar {
+    box-shadow: 'none';
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    height: 3em;
+    width:  100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #facfca;
+    display: table-cell;
+    padding: 1em;
+    font-size: 1.15em;
+    font-weight: 600;
+}
+.info {
+    margin-top: -1.5em;
+    margin-left: -2em;
+    text-align: center;
+    color: #cf3030;
+}
+.birthdayReward {
+    margin-right: 5em !important;
+    display: inline-block;
+    /*padding-right: 5em !important;*/
+}
+/*#invite {
+    right: 0;
+    position: relative;
+    color: darkred;
+}*/

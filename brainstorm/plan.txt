@@ -1,0 +1,26 @@
+* Reward customer for an action taken
+    (feedback survey ★ Yelp/Google review ★ like, follow, share on socials ★ sign up for Loyalty membership ★ new referral)
+	- reward their time with loyalty points / $2-$5 gift card
+	- generate link to action item on invoice  -> check that all criteria have been met (i.e. action was taken, 1st time reviewers only) -> release gift card to user account
+		- eliminates the need to write down survey code / pull up a receipt to show at checkout on next visit - e.g. Subway (automates this step to save time)
+
+Ordering
+* Most recent order 
+	- one click add to cart 
+	- remove out of stock item(s) - suggest alternatives
+* New order? 
+	- Choose from catalog -> filter by category 
+	- dietary restrictions: halal, kosher, Whole 60, 
+
+
+Invoice
+ - Returning customers can see how much they've saved in total in the past month -> year
+
+
+Loyalty Birthday reward
+ - credited to Loyalty account
+ - notify customer via email
+
+Shopping cart
+	- reorder items (drag & drop / arrow click)
+

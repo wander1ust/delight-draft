@@ -121,18 +121,18 @@ const App = () => {
         <Switch>
     {/*      <Route exact path="/recentOrder">
           </Route>*/}
-          <Route path="/cart">
+{/*          <Route path="/cart">
             <Cart cart={cart} onUpdateCartQty={handleUpdateCartQty} onRemoveFromCart={handleRemoveFromCart} onEmptyCart={handleEmptyCart} />
           </Route>
           <Route path="/checkout">
             <Checkout cart={cart} order={order} onCaptureCheckout={handleCaptureCheckout} error={errorMessage} />
-          </Route>
+          </Route>*/}
           <Route exact path="/">
           {/*{loyaltyBalance && <p>{loyaltyBalance}</p>}*/}
             <Products products={products} catalogImages={catalogImages} loyalty={loyalty} onAddToCart={handleAddToCart} handleUpdateCartQty={handleUpdateCartQty} />
           }
           </Route>          
-        </Switch>
+        </Switch>        
       </div>
     </Router>
   );
