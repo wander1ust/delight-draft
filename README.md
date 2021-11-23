@@ -1,4 +1,4 @@
-# Square Loyalty Rewards
+# Square Delight &#x1F3EE;
 
 <br/>
 
@@ -14,26 +14,29 @@
 5. Open a new Terminal tab, cd to `client/` dir, and run **`npm install`** to install all client dependencies
 6. Run **`npm start`** to start the React app on localhost:3000
 
-<hr/><br/>
+<br/>
 
 ### Configuring your environment
 Rename **`.env.example`** to **`.env`** and add your Square app credentials.
 
-<br/><hr/>
+<br/>
 
 ## Inspiration
-I’ve used Square POS before as both an employee and customer. But it wasn't until this hackathon that I became aware of the company behind this software. I used to work as a barista at a bubble tea franchise. Ordering bubble tea<b>&#x1F9CB;</b> (or *boba* tea <b>&#x1F609;</b>) is an expensive, luxury treat. It's far cheaper (and healthier) to make bubble tea yourself. Given that the majority of customers who frequented the shop were college students, I believe we would have seen an increase in regulars & returning customers if the shop offered a customer loyalty reward program (students would ask about discounts or stamp cards from time to time). Offering incentives based on purchases made & points earned is a great way to build and retain a loyal customer base. 
 
-A referral program is another great marketing strategy for promoting a business. Is there demand for a referral + affiliate program within Square's seller community? Indeed, there is! If you search the seller community forum for 'affiliate referral', you'll get back <a href="https://www.sellercommunity.com/t5/forums/searchpage/tab/message?q=affiliate%20referral" target="_blank"><strong>200+ results related to this query</strong></a>. Here's <a href="https://www.sellercommunity.com/t5/Questions-How-To/Will-Square-Loyalty-be-developing-customer-referral-affiliate/td-p/214470" target="_blank"><strong>a recent post by one Square seller</strong></a> requesting an affiliate refferal program in conjunction with Square's Loyalty program to be packaged as an all-in-one, seamless customer Square Loyalty experience.
+>  *A delighted customer a day, keeps them coming to stay ツ* 
 
-<br/><hr/>
+I’ve used Square POS before as both an employee and customer. But it wasn't until this hackathon that I became aware of the company behind this software. I used to work as a barista at a bubble tea franchise. Given that the majority of customers who frequented the shop were college students, I believe we would have seen an increase in regulars & returning customers if the shop had offered a customer loyalty reward program (students would ask about discounts or stamp cards from time to time). Because ordering bubble tea<b>&#x1F9CB;</b> (or *boba* tea <b>&#x1F609;</b>) is an expensive, luxury treat. Offering incentives based on purchases made or points earned is a great way to build and retain a loyal customer base. 
+
+A referral program is another effective marketing strategy for promoting a business. Is there demand for a referral + affiliate program within Square's seller community? Indeed, there is! If you search the seller community forum for 'affiliate referral', you'll get back <a href="https://www.sellercommunity.com/t5/forums/searchpage/tab/message?q=affiliate%20referral" target="_blank"><strong>200+ results related to this query</strong></a>. Here's <a href="https://www.sellercommunity.com/t5/Questions-How-To/Will-Square-Loyalty-be-developing-customer-referral-affiliate/td-p/214470" target="_blank"><strong>a recent post by one Square seller</strong></a> requesting an affiliate refferal program in conjunction with Square's Loyalty program to be packaged as an all-in-one, seamless customer Square Loyalty experience.
+
+<br/>
 
 
 ## Video Demo
 <a href="https://rebrand.ly/square-loyalty-video-demo" target="_blank"><img alt="video thumbnail" src="client/src/assets/imgs/video-thumbnail.png" width="650px" height=""/></a>
 
 
-<br/><hr/>
+<br/>
 
 ## Screen Shots
 <img alt="catalog" src="client/src/assets/screen%20shots/1.png" width="650px" height=""/></a>
@@ -53,7 +56,7 @@ A referral program is another great marketing strategy for promoting a business.
 ## Limitations
 Unfinished, buggy app &nbsp; ★ &nbsp; Broken code <b>&#9785;&#65039;</b><br/> 
 
-<br/><hr/>
+<br/>
 
 ## Accomplishments
 
