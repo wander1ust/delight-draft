@@ -9,9 +9,10 @@
 
 ## Installation 
 1. Clone this repository
-3. Run **`npm run install-all`** from the root directory to install all dependencies
-4. Run **`cd server && npm start`** to run the node server on localhost:5000
-5. Run **`cd client && npm start`** in a new Terminal tab to start the React app on localhost:3000
+2. Run **`cd server && npm install`** to install all server dependencies
+3. Run **`npm start`** from `server/` dir to run the node server on localhost:5000
+5. Open a new Terminal tab, cd to `client/` dir, and run **`npm install`** to install all client dependencies
+6. Run **`npm start`** to start the React app on localhost:3000
 
 <hr/><br/>
 

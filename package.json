@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/wander1ust/delight-draft/issues"
   },
-  "homepage": "https://github.com/wander1ust/delight-draft#readme"
+  "homepage": "https://github.com/wander1ust/delight-draft#readme",
+  "dependencies": {
+    "concurrently": "^6.4.0"
+  }
 }
