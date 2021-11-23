@@ -1,0 +1,10 @@
+Thanks to @adrianhajdin for the open source, front-end e-commerce starter template:
+https://github.com/adrianhajdin/project_e_commerce
+
+
+Video play icon from Pixabay: 
+https://pixabay.com/illustrations/youtube-red-social-icon-play-1495277/
+
+
+Royalty free images from Unsplash:
+https://unsplash.com/license

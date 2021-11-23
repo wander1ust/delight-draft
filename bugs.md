@@ -1,5 +1,7 @@
 ## 🦋  BUGS  🦋 
 ### ❎ NOT WORKING - I KNOW WHY 👩🏻‍💻
+- replace hardcoded points in Product.jsx
+- nonfunctional, buggy app
 <hr/>
 
 ### ❌ NOT WORKING - IDK WHY 🤷🏻‍♀️
@@ -11,8 +13,11 @@
 - loyalty account balance needs to update with total item points added to cart
 - fetch customer account data, replace hardcoded values 
 - add customer login & authentication
+- delete Stripe from Cart/CheckoutForm/PaymentForm.jsx
+- uneven product card height, set fixed height, limit description char count
+- deactivate reward when claimed
 - fix console log bugs
-- ... other features that I can't think of rn
+- ... lots of broken code that I can't think of rn
 
 👇 why don't these work??
 ```

@@ -101,7 +101,7 @@ function Referral() {
             id="firstName"
             label="First Name"
             type="text"
-            placeholder="hokage@konoha.com"
+            placeholder="Naru"
             fullWidth
             variant="standard"
           />
@@ -111,7 +111,7 @@ function Referral() {
             id="lastName"
             label="Last Name"
             type="text"
-            placeholder="Naru Touzumaki"
+            placeholder="Touzumaki"
             fullWidth
             variant="standard"
           />

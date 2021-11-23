@@ -1,0 +1,21 @@
+{
+  "name": "square-loyalty",
+  "version": "1.0.0",
+  "description": "<br/>",
+  "main": "index.js",
+  "scripts": {
+    "client-install": "cd client && npm install",
+    "server-install": "cd server && npm install",
+    "install-all": "concurrently \"npm run client-install\" \"npm run server-install\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wander1ust/delight-draft.git"
+  },
+  "author": "@wander1ust",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wander1ust/delight-draft/issues"
+  },
+  "homepage": "https://github.com/wander1ust/delight-draft#readme"
+}
