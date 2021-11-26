@@ -1,7 +1,7 @@
 [build]
   base = "client/"
-  publish = "netlify-build-output/"
-  command = "npm run build"
+  publish = "public"
+  command = "CL= npm run build"
 
 [[redirects]]
   from = "/*"
