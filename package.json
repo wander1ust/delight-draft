@@ -4,6 +4,7 @@
   "description": "<br/>",
   "main": "index.js",
   "scripts": {
+    "start" : "node server/index.js",
     "client-install": "cd client && npm install",
     "server-install": "cd server && npm install",
     "install-all": "concurrently \"npm run client-install\" \"npm run server-install\""
@@ -20,5 +21,6 @@
   "homepage": "https://github.com/wander1ust/delight-draft#readme",
   "dependencies": {
     "concurrently": "^6.4.0"
-  }
+  },
+  "heroku-postbuild": "cd client && npm install && npm run build"
 }
